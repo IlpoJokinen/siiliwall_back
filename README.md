@@ -118,3 +118,7 @@ Se ei kuitenkaan onnistu pakottamatta, jos poistettavaa haaraa ei ole yhdistetty
    `Java -versio 8 - https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html`
    
    `Springboot -versio 2.2.4.RELEASE - https://spring.io/projects/spring-boot`
+
+   `Visual Studio Code https://code.visualstudio.com/`
+   
+   `Intellji https://www.jetbrains.com/idea/`
