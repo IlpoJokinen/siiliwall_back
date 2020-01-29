@@ -32,13 +32,16 @@ Muista, että kaikki, mikä on commitilla talletettu, on palautettavissa. Siksi 
 Yksinkertaisin malli, jota useimmissa pienissä projekteissa käytetään, on keskitetty. 
 Kaikilla on kirjoitusoikeudet yhteiseen repositoryyn. 
 
-Aluksi kaikki kloonaavat yhteisen repositoryn 
+1. Aluksi kaikki kloonaavat yhteisen repositoryn 
 `git clone<repository-url>`
-Muutokset tehdään omaan repositoryyn, kukin omaan tahtiinsa 
+
+2. Muutokset tehdään omaan repositoryyn, kukin omaan tahtiinsa 
 `git commit`
-Valmiit muutokset viedään yhteiseen repositoryyn. 
+
+3. Valmiit muutokset viedään yhteiseen repositoryyn. 
 `git push origin master` # etä-repository origin, muutokset masterissa
-Muiden muutokset haetaan omaan repositoryyn, yhdistetään omiin ja julkaistaan
+
+4. Muiden muutokset haetaan omaan repositoryyn, yhdistetään omiin ja julkaistaan
 `git  fetch origin`
 `git  merge origin/master`
 `git  push origin master`
