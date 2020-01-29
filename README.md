@@ -7,9 +7,11 @@
 ## Päivittäisen työskentelyn aloitus:
 
 Aloitus aina `git status`
+
 Hyvä käytäntö on myös käyttää commit-historian nähdäksesi `git log`
 
-Tarkista branchisi `git branch` komennolla
+Tarkista branchisi komennolla `git branch`
+
 Voit vaihtaa branchia `git checkout branchinNimi`
 
 Tiedoston muutoksia aiempaan versioon voi tarkastella komennolla diff.
@@ -19,7 +21,6 @@ Jos commitistaunohtui jotain tai viesti meni väärin,
 voit täydentää tuoreinta kommittialaajentimella--amend. 
 Lisää (add) muutokset ja tee commit:
 `git commit --amend`
-
 
 Jos lisäsit seuraavaan committiin(add) tiedoston, joka ei sinne kuuluisi, voit peruuttaa staginginkomennolla reset:
 `git reset HEAD temp.log` # HEAD viittaa tuoreimpaan versioon
@@ -58,7 +59,9 @@ Jos teet muutokset master-haaraasi, joudut todennäköisesti peruuttamaan master
 koska se ei enää vastaa etärepositoryn master-haaraa.
 
 ## Branchin nimeäminen:
+
 Branchien nimet pienellä
+
 Luo uusi branchi `git branch branchinNimi`
 
 Luo uudelle ominaisuudelle haara (gitbranch) ja vaihda siihen haaraan  (gitcheckout). Tähän on pikakomento:
