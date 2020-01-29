@@ -58,36 +58,53 @@ koska se ei enää vastaa etärepositoryn master-haaraa.
 
 Branchien nimet pienellä
 
-Luo uusi branchi `git branch branchinNimi`
+Luo uusi branchi 
+
+`git branch branchinNimi`
 
 Luo uudelle ominaisuudelle haara (git branch) ja vaihda siihen haaraan  (git checkout). Tähän on pikakomento:
+
 `git  checkout –b branch`   # luo haaran ja vaihtaa siihen
 
 Jos haaraa ei enää tarvita, sen voi poistaa laajentimella–d (--delete). 
 Se ei kuitenkaan onnistu pakottamatta, jos poistettavaa haaraa ei ole yhdistetty. 
+
 `git  branch –d branch`
 
 ## Jos haluat lisätä tiedoston repositoryyn.
-`1. mene projekti kansioon`
-`2. $git add . lisää kaiken älä käytä tätä.`
-`2. $git add tiedoston nimi lisää yksittäisen tiedoston.`
-`3. $git commit -m "tähän kirjoitetaan viesti"`
-`4. $git push origin master älä käytä masteria`
 
-`5. $git checkout branchin nimi>vaihtaa branchin`
+`1. mene projekti kansioon`
+
+`2. git add . lisää kaiken älä käytä tätä.`
+`2. git add tiedoston nimi lisää yksittäisen tiedoston.`
+
+`3. git commit -m "tähän kirjoitetaan viesti"`
+
+`4. git push origin master älä käytä masteria`
+
+`5. git checkout branchin nimi > vaihtaa branchin`
 
 ## Commitin poistaminen idn avulla id näkyy githubissa commit valikossa.
-`$git push origin +dd61ab32^:master--> poistaa commitin idn perusteella`
+
+`git push origin +dd61ab32^: master --> poistaa commitin idn perusteella`
 
 ## hyödyllisiä komentoja
+
 `$git branch -a näyttää kaikki branchit`
+
 `$git status näyttää tiedostot joissa on tapahtunut muutoksia`
 
 
 ## Jos haluat mergaa branchin masteriin mene ensiksi master branchiin komennolla
-`1. $git checkout master`
-`2. $git merge branchin nimi`
+
+`1. git checkout master`
+
+`2. git merge branchin nimi`
+
 `3. mene kirjoitus tilaan painamalla i näppäintä`
+
 `4. kirjoita ylös viesti viesti, joka näkyy keltaisella värillä`
+
 `5. mene pois kirjoitus tilasta painamalla esc näppäintä`
+
 `6. viimeistele kirjoittamalla :wq ja painamalla enter`
