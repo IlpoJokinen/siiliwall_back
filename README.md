@@ -1,8 +1,4 @@
 # SiiliProjekti
-## SiiliProjekti
-### `SiiliProjekti`
-`SiiliProjekti`
-[Linkki](www.github.com)
 
 ## Päivittäisen työskentelyn aloitus:
 
@@ -64,7 +60,7 @@ Branchien nimet pienellä
 
 Luo uusi branchi `git branch branchinNimi`
 
-Luo uudelle ominaisuudelle haara (gitbranch) ja vaihda siihen haaraan  (gitcheckout). Tähän on pikakomento:
+Luo uudelle ominaisuudelle haara (git branch) ja vaihda siihen haaraan  (git checkout). Tähän on pikakomento:
 `git  checkout –b branch`   # luo haaran ja vaihtaa siihen
 
 Jos haaraa ei enää tarvita, sen voi poistaa laajentimella–d (--delete). 
