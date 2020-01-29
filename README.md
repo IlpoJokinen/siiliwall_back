@@ -2,6 +2,11 @@
 
 ## Päivittäisen työskentelyn aloitus:
 
+
+
+
+
+
 Aloitus aina `git status`
 
 Hyvä käytäntö on myös käyttää commit-historian nähdäksesi `git log`
@@ -70,6 +75,19 @@ Jos haaraa ei enää tarvita, sen voi poistaa laajentimella–d (--delete).
 Se ei kuitenkaan onnistu pakottamatta, jos poistettavaa haaraa ei ole yhdistetty. 
 
 `git  branch –d branch`
+
+-- make documentation in English
+-- Topics needed in documentation
+1. Merge instructions
+2. Removing of unneeded commit
+3. Starting of Daily work
+4. Naming convention used in branching
+5. Convention of commit messages
+6. Acceptance criteria of putting something to git
+7. Ending of daily work
+8. Possible external resources/links used define how git is used
+
+
 
 ## Jos haluat lisätä tiedoston repositoryyn.
 
