@@ -108,3 +108,10 @@ Se ei kuitenkaan onnistu pakottamatta, jos poistettavaa haaraa ei ole yhdistetty
 `5. mene pois kirjoitus tilasta painamalla esc näppäintä`
 
 `6. viimeistele kirjoittamalla :wq ja painamalla enter`
+
+
+  ## Tool versions and links
+   `Node.js -versio 12.14.1 LTS - https://nodejs.org/en/`
+   `React.js -versio 16.12 - https://reactjs.org/versions`
+   `Java -versio 8 - https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html`
+   `Springboot -versio 2.2.4.RELEASE - https://spring.io/projects/spring-boot`
