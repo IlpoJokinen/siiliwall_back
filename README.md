@@ -57,17 +57,17 @@ DISCLAIMER: remember, that every commit, which has been saved is restoreable. Th
 
 ### Merge instructions (from branch to master)
 
-Step 1. `Write git checkout master in order to go master branch`
+Step 1. Write `git checkout master` in order to go master branch
 
-Step 2. `Write git merge branchName`
+Step 2. Write `git merge` branchName
 
-Step 3. `Enter writing mode by pressing i on your keyboard.`
+Step 3. Enter writing mode by pressing i on your keyboard.
 
-Step 4. `Write message message is displayed in yellow color.`
+Step 4. Write message message is displayed in yellow color.
 
-Step 5. `Exit writing mode by pressing esc key on your keyboard.`
+Step 5. Exit writing mode by pressing esc key on your keyboard.
 
-Step 6. `Finish merging process by writing :wq and pressing enter on your keyboard.`
+Step 6. Finish merging process by writing :wq and pressing enter on your keyboard.
 
 ### Making pull request:
 
@@ -117,13 +117,13 @@ A properly formed git commit subject line should always be able to complete the 
 
 ### Delete commit using commit id you can find commit id from github commits. Id contains 8 characters or/and digits
 
-`Write git push origin +id^: master`
+Write `git push origin +id^: master`
 
 ## Useful commands
 
-`Write git branch -a to display all branches`
+Write `git branch -a` to display all branches
 
-`Write git status to display files containing changes.`
+Write `git status` to display files containing changes.
 
 ## Ending of daily work
 
