@@ -113,7 +113,11 @@ A properly formed git commit subject line should always be able to complete the 
 
 ## Acceptance criteria of putting something to git
 
-???
+Test code.
+
+Code review with project team members and learning process.
+
+Code review with the boss.
 
 ### Delete commit using commit id you can find commit id from github commits. Id contains 8 characters or/and digits
 
