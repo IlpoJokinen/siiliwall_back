@@ -44,6 +44,7 @@ DISCLAIMER: remember, that every commit, which has been saved is restoreable. Th
 `git commit -m "message goes here"`
 
 3. Push changes to shared repository
+
 `git push origin master` # remote-repository origin, changes in branch
 
 4. Other people changes can be fetched in your own repository, merged and pushed.
