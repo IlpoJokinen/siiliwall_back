@@ -71,43 +71,42 @@ Se ei kuitenkaan onnistu pakottamatta, jos poistettavaa haaraa ei ole yhdistetty
 
 `git  branch –d branch`
 
-## Jos haluat lisätä tiedoston repositoryyn.
+## Add new file/files to github repository.
+`Step 1. Go to project folder`
 
-`1. mene projekti kansioon`
+`Step 2. Write git add . to add all files to repository don't use this all the time.`
+`Step 2. Write git add file name to add sigle file to github repository.`
 
-`2. git add . lisää kaiken älä käytä tätä.`
-`2. git add tiedoston nimi lisää yksittäisen tiedoston.`
+`Step 3. Write git commit -m "message goes here.`
 
-`3. git commit -m "tähän kirjoitetaan viesti"`
+`Step 4. Write git push origin master to push changes to master branch replace master with other branch name when you push to github.`
 
-`4. git push origin master älä käytä masteria`
+`Step 5. Write git checkout branch name to change current working branch.`
 
-`5. git checkout branchin nimi > vaihtaa branchin`
+## Delete commit using commit id you can find commit id from github commits id contains 8 charecters, digits.
 
-## Commitin poistaminen idn avulla id näkyy githubissa commit valikossa.
+`Write git push origin +id^: master`
 
-`git push origin +dd61ab32^: master --> poistaa commitin idn perusteella`
+## Usefull commands.
 
-## hyödyllisiä komentoja
+`Write git branch -a to display all branches`
 
-`$git branch -a näyttää kaikki branchit`
-
-`$git status näyttää tiedostot joissa on tapahtunut muutoksia`
+`Write git status to display files containing changes.`
 
 
-## Jos haluat mergaa branchin masteriin mene ensiksi master branchiin komennolla
+## In case you want to merge branch to master.
 
-`1. git checkout master`
+`Step 1. Write git checkout master in order to go master branch`
 
-`2. git merge branchin nimi`
+`Step 2. Write git merge branch name`
 
-`3. mene kirjoitus tilaan painamalla i näppäintä`
+`Step 3. Enter writing mode by pressing i on your keyboard.`
 
-`4. kirjoita ylös viesti viesti, joka näkyy keltaisella värillä`
+`Step 4. Write message message is displayed in yellow color.`
 
-`5. mene pois kirjoitus tilasta painamalla esc näppäintä`
+`Step 5. Exit writing mode by pressing esc key on your keyboard.`
 
-`6. viimeistele kirjoittamalla :wq ja painamalla enter`
+`Step 6. Finish merging process by writing :wq and pressing enter on your keyboard.`
 
 
   ## Tool versions and links
