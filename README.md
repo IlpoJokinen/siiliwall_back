@@ -1,55 +1,57 @@
 # SiiliProjekti
 
-## Päivittäisen työskentelyn aloitus:
+## Starting of Daily work:
 
-Aloitus aina `git status`
+Start your workday with `git status`
 
-Hyvä käytäntö on myös käyttää commit-historian nähdäksesi `git log`
+To see commit-history use `git log`
 
-Tarkista branchisi komennolla `git branch`
+Check your current branch `git branch`
 
-Voit vaihtaa branchia `git checkout branchinNimi`
+Your are able to switch branch with `git checkout branchName`
 
-Tiedoston muutoksia aiempaan versioon voi tarkastella komennolla diff.
-`git diff tiedosto.js`
+File changes to previous version can be checked by using command diff. 
+`git diff fileName`
 
-Jos commitistaunohtui jotain tai viesti meni väärin, 
-voit täydentää tuoreinta kommittialaajentimella--amend. 
-Lisää (add) muutokset ja tee commit:
+If you forgot something from your commit or you typed commit wrong,
+Your are able to fill in the latest commit by using --amend.
+Add changes and do commit:
 `git commit --amend`
 
-Jos lisäsit seuraavaan committiin(add) tiedoston, joka ei sinne kuuluisi, voit peruuttaa staginginkomennolla reset:
-`git reset HEAD temp.log` # HEAD viittaa tuoreimpaan versioon
+If you added a file to the next commit(add), that you did not want to add, you can abort the staging with command reset:
+`git reset HEAD fileName` # HEAD refers to the latest version
 
-Jos haluat hylätä tiedostoon tekemäsi muutokset ja palata versionhallinnassa olevaan versioon, se onnistuu komennolla checkout.
-`git checkout –- tiedosto.tyyppi`
+If you want to abandon your changes in file and go back to a version in the version control, it is possible with checkout.
+`git checkout –- fileName`
 
-Muista, että kaikki, mikä on commitilla talletettu, on palautettavissa. Siksi committeja kannattaa tehdä usein.
+DISCLAIMER: remember, that every commit, which has been saved is restoreable. Therefore your should make as many commits as possible.
 
-Yksinkertaisin malli, jota useimmissa pienissä projekteissa käytetään, on keskitetty. 
-Kaikilla on kirjoitusoikeudet yhteiseen repositoryyn. 
+Simple model, that is been used in this project, where everyone has the rights to write in repository works like written below:
 
-1. Aluksi kaikki kloonaavat yhteisen repositoryn 
-`git clone<repository-url>`
+1. Firstly everyone must clone the shared repository
+`git clone <repository-url>`
 
-2. Muutokset tehdään omaan repositoryyn, kukin omaan tahtiinsa 
+2. Changes will be made in the repository with basic commands
+`git add fileName`
 `git commit`
 
-3. Valmiit muutokset viedään yhteiseen repositoryyn. 
-`git push origin master` # etä-repository origin, muutokset masterissa
+3. Push changes to shared repository
+`git push origin master` # remote-repository origin, changes in branch
 
-4. Muiden muutokset haetaan omaan repositoryyn, yhdistetään omiin ja julkaistaan
-`git  fetch origin`
-`git  merge origin/master`
-`git  push origin master`
+4. Other people changes can be fetched in your own repository, merged and pushed.
+`git fetch origin`
+`git merge origin/master`
+`git push origin master`
 
-Pull requestin tekeminen:
+Making pull request:
 
-Komento `git pull`
+Command `git pull`
 
-Pull requestissa tarjottavat muutokset kannattaa aina tehdä feature-haaroissa.
+Changes coming from pull request should be always done in feature-branches. # example feature/development
 
-Jos muutokset on otettu mukaan, saat omat muutoksesi takaisin omaan repositoryysiprojektin master-haarassa pull-operaatiolla.
+
+
+Jos muutokset on otettu mukaan, saat omat muutoksesi takaisin omaan repositoryysi projektin master-haarassa pull-operaatiolla.
 
 Jos teet muutokset master-haaraasi, joudut todennäköisesti peruuttamaan master-haarassasi, 
 koska se ei enää vastaa etärepositoryn master-haaraa.
@@ -108,16 +110,19 @@ Se ei kuitenkaan onnistu pakottamatta, jos poistettavaa haaraa ei ole yhdistetty
 
 `Step 6. Finish merging process by writing :wq and pressing enter on your keyboard.`
 
+## Tool versions and links
+[Node.js -version 12.14.1 LTS](https://nodejs.org/en/)
 
-  ## Tool versions and links
-   `Node.js -versio 12.14.1 LTS - https://nodejs.org/en/`
-   
-   `React.js -versio 16.12 - https://reactjs.org/versions`
-   
-   `Java -versio 8 - https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html`
-   
-   `Springboot -versio 2.2.4.RELEASE - https://spring.io/projects/spring-boot`
+[React.js -version 16.12](https://reactjs.org/versions)
 
-   `Visual Studio Code https://code.visualstudio.com/`
+[Java -version 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+
+[Springboot -version 2.2.4.RELEASE](https://spring.io/projects/spring-boot)
+
+[Visual Studio Code](https://code.visualstudio.com/)
+
+[IntelliJ IDEA](https://www.jetbrains.com/idea/)
    
-   `Intellji https://www.jetbrains.com/idea/`
+## Possible external resources/links used define how git is used
+
+[ADD LINK NAME HERE](ADD LINK URL HERE)
