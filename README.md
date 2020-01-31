@@ -69,7 +69,7 @@ Step 5. Exit writing mode by pressing esc key on your keyboard.
 
 Step 6. Finish merging process by writing :wq and pressing enter on your keyboard.
 
-### Making pull request:
+### Making pull request
 
 Changes coming from pull request should be always done in feature-branches. # example feature/development
 
