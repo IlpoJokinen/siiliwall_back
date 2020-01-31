@@ -1,6 +1,6 @@
-# SiiliProjekti
+# Siili Wall Project
 
-## Starting of Daily work:
+## Starting of daily work:
 
 Start your workday with `git status`
 
@@ -49,34 +49,30 @@ Command `git pull`
 
 Changes coming from pull request should be always done in feature-branches. # example feature/development
 
+If changes has been pulled, you can get your own changes back in your own repository from master-branch with pull command.
 
+## Naming convention used in branching:
 
-Jos muutokset on otettu mukaan, saat omat muutoksesi takaisin omaan repositoryysi projektin master-haarassa pull-operaatiolla.
+All branches are named with lower cases
 
-Jos teet muutokset master-haaraasi, joudut todennäköisesti peruuttamaan master-haarassasi, 
-koska se ei enää vastaa etärepositoryn master-haaraa.
+Create a new branch:
 
-## Branchin nimeäminen:
+`git branch branchName`
 
-Branchien nimet pienellä
+Fast way for creating and hopping in the branch:
 
-Luo uusi branchi 
+`git  checkout –b branch` # creates branch and switches there
 
-`git branch branchinNimi`
-
-Luo uudelle ominaisuudelle haara (git branch) ja vaihda siihen haaraan  (git checkout). Tähän on pikakomento:
-
-`git  checkout –b branch`   # luo haaran ja vaihtaa siihen
-
-Jos haaraa ei enää tarvita, sen voi poistaa laajentimella–d (--delete). 
-Se ei kuitenkaan onnistu pakottamatta, jos poistettavaa haaraa ei ole yhdistetty. 
+If you have no use for branch, you can delete it with -d (--delete).
 
 `git  branch –d branch`
 
 ## Add new file/files to github repository.
+
 `Step 1. Go to project folder`
 
 `Step 2. Write git add . to add all files to repository don't use this all the time.`
+
 `Step 2. Write git add file name to add sigle file to github repository.`
 
 `Step 3. Write git commit -m "message goes here.`
@@ -89,7 +85,7 @@ Se ei kuitenkaan onnistu pakottamatta, jos poistettavaa haaraa ei ole yhdistetty
 
 `Write git push origin +id^: master`
 
-## Usefull commands.
+## Useful commands.
 
 `Write git branch -a to display all branches`
 
@@ -100,7 +96,7 @@ Se ei kuitenkaan onnistu pakottamatta, jos poistettavaa haaraa ei ole yhdistetty
 
 `Step 1. Write git checkout master in order to go master branch`
 
-`Step 2. Write git merge branch name`
+`Step 2. Write git merge branchName`
 
 `Step 3. Enter writing mode by pressing i on your keyboard.`
 
@@ -109,6 +105,8 @@ Se ei kuitenkaan onnistu pakottamatta, jos poistettavaa haaraa ei ole yhdistetty
 `Step 5. Exit writing mode by pressing esc key on your keyboard.`
 
 `Step 6. Finish merging process by writing :wq and pressing enter on your keyboard.`
+
+## Ending of daily work
 
 ## Tool versions and links
 [Node.js -version 12.14.1 LTS](https://nodejs.org/en/)
