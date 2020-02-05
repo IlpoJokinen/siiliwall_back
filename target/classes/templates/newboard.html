@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <title>This is only for testing</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<form th:object="${board}" th:action="@{saveboard}" action="#" method="post">
+    <label for="boardname">boardname</label>
+    <input type="text" id="boardname" th:field="*{boardname}" />
+    <input type="submit" value="Save"></input>
+</form>
+
+</body>
+</html>
