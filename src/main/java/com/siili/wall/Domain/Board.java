@@ -1,6 +1,7 @@
 package com.siili.wall.Domain;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity(name="Board")
 @Table(name="board")
@@ -10,11 +11,16 @@ public class Board {
     private Long boardid;
     private String boardname;
 
+    @OneToMany(cascade=CascadeType.ALL, mappedBy="board")
+    private List<Column> columns;
+
+
     public Board(){}
 
-    public Board(String boardname){
+    public Board(String boardname, List<Column> columns){
         super();
         this.boardname = boardname;
+        this.columns = columns;
     }
 
     // GETTERS
@@ -33,6 +39,14 @@ public class Board {
 
     public void setBoardname(String boardname) {
         this.boardname = boardname;
+    }
+
+    public List<Column> getColumns() {
+        return columns;
+    }
+
+    public void setColumns(List<Column> columns) {
+        this.columns = columns;
     }
 
     @Override
