@@ -64,4 +64,15 @@ public class Sticker {
     public void setStickerSize(int stickerSize) {
         this.stickerSize = stickerSize;
     }
+
+    @Override
+    public String toString() {
+        return "Sticker{" +
+                "stickerId=" + stickerId +
+                ", stickerName='" + stickerName + '\'' +
+                ", stickerDescription='" + stickerDescription + '\'' +
+                ", stickerColor='" + stickerColor + '\'' +
+                ", stickerSize='" + stickerSize + '\'' +
+                '}';
+    }
 }

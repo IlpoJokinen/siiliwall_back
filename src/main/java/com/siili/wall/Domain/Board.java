@@ -34,4 +34,12 @@ public class Board {
     public void setBoardname(String boardname) {
         this.boardname = boardname;
     }
+
+    @Override
+    public String toString() {
+        return "Board{" +
+                "boardid=" + boardid +
+                ", boardname='" + boardname + '\'' +
+                '}';
+    }
 }
