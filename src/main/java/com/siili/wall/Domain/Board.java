@@ -14,9 +14,10 @@ public class Board {
 
     public Board(String boardname){
         super();
-        this.boardname=boardname;
+        this.boardname = boardname;
     }
 
+    // GETTERS
     public Long getBoardid() {
         return boardid;
     }
@@ -25,6 +26,7 @@ public class Board {
         return boardname;
     }
 
+    // SETTERS
     public void setBoardid(Long boardid) {
         this.boardid = boardid;
     }

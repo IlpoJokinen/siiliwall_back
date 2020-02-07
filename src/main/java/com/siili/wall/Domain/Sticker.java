@@ -11,14 +11,16 @@ public class Sticker {
     private String stickerName;
     private String stickerDescription;
     private String stickerColor;
+    private int stickerSize;
 
     public Sticker(){}
 
-    public Sticker(String stickerName, String stickerDescription, String stickerColor){
+    public Sticker(String stickerName, String stickerDescription, String stickerColor, int stickerSize){
         super();
-        this.stickerName=stickerName;
-        this.stickerDescription=stickerDescription;
-        this.stickerColor=stickerColor;
+        this.stickerName = stickerName;
+        this.stickerDescription = stickerDescription;
+        this.stickerColor = stickerColor;
+        this.stickerSize = stickerSize;
     }
 
     // GETTERS
@@ -35,7 +37,11 @@ public class Sticker {
     }
 
     public String getStickerColor() {
-        return stickerName;
+        return stickerColor;
+    }
+
+    public int getStickerSize() {
+        return stickerSize;
     }
 
     // SETTERS
@@ -53,5 +59,9 @@ public class Sticker {
 
     public void setStickerColor(String stickerColor) {
         this.stickerColor = stickerColor;
+    }
+
+    public void setStickerSize(int stickerSize) {
+        this.stickerSize = stickerSize;
     }
 }
