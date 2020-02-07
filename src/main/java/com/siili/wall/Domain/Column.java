@@ -12,7 +12,7 @@ public class Column {
     private int columnLimit;
 
     @ManyToOne
-    @JoinColumn(name="boardid")
+    @JoinColumn(name="boardId")
     private Board board;
 
     public Column(){}

@@ -17,7 +17,7 @@ public class Sticker {
 
     public Sticker(){}
 
-    public Sticker(String stickerName, String stickerDescription, String stickerColor,String stickerOwner, int stickerSize, int stickerDifficulty){
+    public Sticker(String stickerName, String stickerDescription, String stickerColor, String stickerOwner, int stickerSize, int stickerDifficulty){
         super();
         this.stickerName = stickerName;
         this.stickerDescription = stickerDescription;

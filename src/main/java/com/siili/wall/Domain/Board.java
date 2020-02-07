@@ -8,8 +8,8 @@ import java.util.List;
 public class Board {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private Long boardid;
-    private String boardname;
+    private Long boardId;
+    private String boardName;
 
     @OneToMany(cascade=CascadeType.ALL, mappedBy="board")
     private List<Column> columns;
@@ -17,28 +17,28 @@ public class Board {
 
     public Board(){}
 
-    public Board(String boardname, List<Column> columns){
+    public Board(String boardName, List<Column> columns){
         super();
-        this.boardname = boardname;
+        this.boardName = boardName;
         this.columns = columns;
     }
 
     // GETTERS
-    public Long getBoardid() {
-        return boardid;
+    public Long getBoardId() {
+        return boardId;
     }
 
-    public String getBoardname() {
-        return boardname;
+    public String getBoardName() {
+        return boardName;
     }
 
     // SETTERS
-    public void setBoardid(Long boardid) {
-        this.boardid = boardid;
+    public void setBoardId(Long boardId) {
+        this.boardId = boardId;
     }
 
-    public void setBoardname(String boardname) {
-        this.boardname = boardname;
+    public void setBoardName(String boardName) {
+        this.boardName = boardName;
     }
 
     public List<Column> getColumns() {
@@ -52,8 +52,8 @@ public class Board {
     @Override
     public String toString() {
         return "Board{" +
-                "boardid=" + boardid +
-                ", boardname='" + boardname + '\'' +
+                "boardId=" + boardId +
+                ", boardName='" + boardName + '\'' +
                 '}';
     }
 }
