@@ -9,14 +9,19 @@ public class Sticker {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long stickerId;
     private String stickerName;
+    private String stickerDescription;
+    private String stickerColor;
 
     public Sticker(){}
 
-    public Sticker(String stickerName){
+    public Sticker(String stickerName, String stickerDescription, String stickerColor){
         super();
         this.stickerName=stickerName;
+        this.stickerDescription=stickerDescription;
+        this.stickerColor=stickerColor;
     }
 
+    // GETTERS
     public Long getStickerId() {
         return stickerId;
     }
@@ -25,11 +30,28 @@ public class Sticker {
         return stickerName;
     }
 
+    public String getStickerDescription() {
+        return stickerDescription;
+    }
+
+    public String getStickerColor() {
+        return stickerName;
+    }
+
+    // SETTERS
     public void setStickerId(Long stickerId) {
         this.stickerId = stickerId;
     }
 
     public void setStickerName(String stickerName) {
         this.stickerName = stickerName;
+    }
+
+    public void setStickerDescription(String stickerDescription) {
+        this.stickerDescription = stickerDescription;
+    }
+
+    public void setStickerColor(String stickerColor) {
+        this.stickerColor = stickerColor;
     }
 }
