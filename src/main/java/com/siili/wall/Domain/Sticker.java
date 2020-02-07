@@ -13,16 +13,18 @@ public class Sticker {
     private String stickerColor;
     private String stickerOwner;
     private int stickerSize;
+    private int stickerDifficulty;
 
     public Sticker(){}
 
-    public Sticker(String stickerName, String stickerDescription, String stickerColor,String stickerOwner, int stickerSize){
+    public Sticker(String stickerName, String stickerDescription, String stickerColor,String stickerOwner, int stickerSize, int stickerDifficulty){
         super();
         this.stickerName = stickerName;
         this.stickerDescription = stickerDescription;
         this.stickerColor = stickerColor;
         this.stickerOwner = stickerOwner;
         this.stickerSize = stickerSize;
+        this.stickerDifficulty = stickerDifficulty;
     }
 
     // GETTERS
@@ -50,6 +52,10 @@ public class Sticker {
         return stickerSize;
     }
 
+    public int getStickerDifficulty() {
+        return stickerDifficulty;
+    }
+
     // SETTERS
     public void setStickerId(Long stickerId) {
         this.stickerId = stickerId;
@@ -75,6 +81,10 @@ public class Sticker {
         this.stickerSize = stickerSize;
     }
 
+    public void setStickerDifficulty(int stickerDifficulty) {
+        this.stickerDifficulty = stickerDifficulty;
+    }
+
     @Override
     public String toString() {
         return "Sticker{" +
@@ -84,6 +94,7 @@ public class Sticker {
                 ", stickerColor='" + stickerColor + '\'' +
                 ", stickerOwner='" + stickerOwner + '\'' +
                 ", stickerSize='" + stickerSize + '\'' +
+                ", stickerDifficulty='" + stickerDifficulty + '\'' +
                 '}';
     }
 }
