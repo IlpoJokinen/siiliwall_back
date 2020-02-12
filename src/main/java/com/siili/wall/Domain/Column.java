@@ -3,7 +3,7 @@ package com.siili.wall.Domain;
 import javax.persistence.*;
 
 @Entity(name="Column")
-@Table(name="column")
+@Table(name="columns")
 public class Column {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

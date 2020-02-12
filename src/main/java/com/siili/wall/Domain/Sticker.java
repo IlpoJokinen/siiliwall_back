@@ -3,7 +3,7 @@ package com.siili.wall.Domain;
 import javax.persistence.*;
 
 @Entity(name="Sticker")
-@Table(name="sticker")
+@Table(name="stickers")
 public class Sticker {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)

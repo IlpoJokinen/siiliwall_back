@@ -10,5 +10,9 @@
     <button >Add new board</button>
 </a>
 
+<tr th:each = "board : ${boards}">
+    <td th:text="${board.boardName}"></td>
+</tr>
+
 </body>
 </html>

@@ -1,44 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< Updated upstream
-    <list default="true" id="a87a8931-93ed-4b1d-9374-cda2531bbab0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/siili/wall/Domain/Column.java" afterDir="false" />
+    <list default="true" id="c2dbbad9-5d72-43a8-a9d0-d926412475b2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_200.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/siili/wall/Domain/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/siili/wall/Domain/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/siili/wall/Domain/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/siili/wall/Domain/Board.class" afterDir="false" />
-=======
-    <list default="true" id="30b26176-4a15-47ca-b02c-0a8548d3041d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/siili/wall/Domain/Column.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/siili/wall/Domain/Column.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/siili/wall/Domain/Sticker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/siili/wall/Domain/Sticker.java" afterDir="false" />
->>>>>>> Stashed changes
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/siili/wall/Domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/siili/wall/Domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/boardlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/boardlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/newboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/newboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/siili/wall/Domain/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/siili/wall/Domain/Board.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/boardlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/boardlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/newboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/newboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wall.iml" beforeDir="false" afterPath="$PROJECT_DIR$/wall.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="Class" />
-        <option value="Interface" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1XNdDIE6hdZ1tSC1pBtWcNJiuQX" />
+  <component name="ProjectId" id="1XhPBSsUWSkuSDIB34AZUkLUSLS" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -46,49 +41,39 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.52068967" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.siili.wall" />
-      <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Valtteri\SiiliProjekti\src\main\java\com\siili\wall" />
-      <recent name="C:\Users\Valtteri\SiiliProjekti\src\main\java\Domain" />
-      <recent name="C:\Users\Valtteri\SiiliProjekti\src\main" />
-    </key>
   </component>
   <component name="RunManager">
-    <configuration name="WallApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="WallApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="wall" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.siili.wall.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.siili.wall.WallApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.WallApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a87a8931-93ed-4b1d-9374-cda2531bbab0" name="Default Changelist" comment="" />
-      <created>1580890364755</created>
+      <changelist id="c2dbbad9-5d72-43a8-a9d0-d926412475b2" name="Default Changelist" comment="" />
+      <created>1581495218674</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1580890364755</updated>
-      <workItem from="1580890373696" duration="43000" />
-      <workItem from="1580891082262" duration="60000" />
-      <workItem from="1580891188239" duration="1800000" />
-      <workItem from="1580893017301" duration="99000" />
-      <workItem from="1580893141963" duration="326000" />
-      <workItem from="1580893594143" duration="2355000" />
-      <workItem from="1581084789786" duration="444000" />
-      <workItem from="1581085261573" duration="1780000" />
+      <updated>1581495218674</updated>
+      <workItem from="1581495225508" duration="5317000" />
+      <workItem from="1581500788368" duration="141000" />
     </task>
     <servers />
   </component>
@@ -96,90 +81,41 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="451" y="95" key="#Assign_Data_Sources" timestamp="1581069533760">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="361" y="75" key="#Assign_Data_Sources/0.0.1536.824@0.0.1536.824" timestamp="1580892784371" />
-    <state x="451" y="95" key="#Assign_Data_Sources/0.0.1920.1040@0.0.1920.1040" timestamp="1581069533760" />
-    <state x="361" y="75" key="#Project_Structure" timestamp="1581085150138">
+    <state width="1478" height="208" key="GridCell.Tab.0.bottom" timestamp="1581500932711">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="75" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1581085150138" />
-    <state x="574" y="120" key="#com.intellij.ide.util.MemberChooser" timestamp="1581086843378">
+    <state width="1478" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581500932711" />
+    <state width="1478" height="208" key="GridCell.Tab.0.center" timestamp="1581500932708">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="120" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1581086843378" />
-    <state x="808" y="410" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1581069485975">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="808" y="410" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581069485975" />
-    <state x="450" y="343" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1580895256650">
+    <state width="1478" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581500932708" />
+    <state width="1478" height="208" key="GridCell.Tab.0.left" timestamp="1581500932708">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="450" y="343" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1580895256650" />
-    <state x="756" y="380" width="407" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1581069668536">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="756" y="380" width="407" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1581069668536" />
-    <state x="571" y="303" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1580895259699">
+    <state width="1478" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581500932708" />
+    <state width="1478" height="208" key="GridCell.Tab.0.right" timestamp="1581500932711">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="571" y="303" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.824@0.0.1536.824" timestamp="1580895259699" />
-    <state x="520" y="273" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1580894810697">
+    <state width="1478" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581500932711" />
+    <state width="1478" height="208" key="GridCell.Tab.1.bottom" timestamp="1581500932712">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="520" y="273" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1580894810697" />
-    <state width="1478" height="210" key="GridCell.Tab.0.bottom" timestamp="1581086863107">
+    <state width="1478" height="208" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581500932712" />
+    <state width="1478" height="208" key="GridCell.Tab.1.center" timestamp="1581500932712">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581086863107" />
-    <state width="1478" height="210" key="GridCell.Tab.0.center" timestamp="1581086863107">
+    <state width="1478" height="208" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1581500932712" />
+    <state width="1478" height="208" key="GridCell.Tab.1.left" timestamp="1581500932711">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581086863107" />
-    <state width="1478" height="210" key="GridCell.Tab.0.left" timestamp="1581086863106">
+    <state width="1478" height="208" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1581500932711" />
+    <state width="1478" height="208" key="GridCell.Tab.1.right" timestamp="1581500932712">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581086863106" />
-    <state width="1478" height="210" key="GridCell.Tab.0.right" timestamp="1581086863107">
+    <state width="1478" height="208" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1581500932712" />
+    <state x="477" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1581500792348">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581086863107" />
-    <state width="1478" height="210" key="GridCell.Tab.1.bottom" timestamp="1581086863107">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581086863107" />
-    <state width="1478" height="210" key="GridCell.Tab.1.center" timestamp="1581086863107">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1581086863107" />
-    <state width="1478" height="210" key="GridCell.Tab.1.left" timestamp="1581086863107">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1581086863107" />
-    <state width="1478" height="210" key="GridCell.Tab.1.right" timestamp="1581086863107">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1581086863107" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1580893696864">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1580893696864" />
-    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1580891142663">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1580891142663" />
-    <state x="477" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1581085264829">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="477" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1581085264829" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1581072518094">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581072518094" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1581071178097">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581071178097" />
+    <state x="477" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1581500792348" />
   </component>
 </project>
