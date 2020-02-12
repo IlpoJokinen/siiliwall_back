@@ -7,8 +7,8 @@
 <body>
 
 <form th:object="${board}" th:action="@{saveboard}" action="#" method="post">
-    <label for="boardname">boardname</label>
-    <input type="text" id="boardname" th:field="*{boardName}" />
+    <label for="boardname">board name</label>
+    <input type="text" id="boardName" th:field="*{boardName}" />
     <input type="submit" value="Save"></input>
 </form>
 

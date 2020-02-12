@@ -32,6 +32,10 @@ public class Board {
         return boardName;
     }
 
+    public List<Column> getColumns() {
+        return columns;
+    }
+
     // SETTERS
     public void setBoardId(Long boardId) {
         this.boardId = boardId;
@@ -39,10 +43,6 @@ public class Board {
 
     public void setBoardName(String boardName) {
         this.boardName = boardName;
-    }
-
-    public List<Column> getColumns() {
-        return columns;
     }
 
     public void setColumns(List<Column> columns) {
