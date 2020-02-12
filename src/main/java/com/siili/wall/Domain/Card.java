@@ -60,6 +60,7 @@ public class Card {
     public int getCardDifficulty() {
         return cardDifficulty;
     }
+    
     public Column getColumn() {
         return column;
     }
@@ -107,6 +108,7 @@ public class Card {
                 ", cardOwner='" + cardOwner + '\'' +
                 ", cardSize='" + cardSize + '\'' +
                 ", cardDifficulty='" + cardDifficulty + '\'' +
+                ", column='" + column + '\'' +
                 '}';
     }
 }

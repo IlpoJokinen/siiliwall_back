@@ -48,7 +48,6 @@ public class Column {
         return cards;
     }
 
-
     // SETTERS
     public void setColumnId(Long columnId) {
         this.columnId = columnId;
@@ -76,6 +75,8 @@ public class Column {
                 "columnId=" + columnId +
                 ", columnName='" + columnName + '\'' +
                 ", columnLimit='" + columnLimit + '\'' +
+                ", board='" + board + '\'' +
+                ", List<Card>='" + cards + '\'' +
                 '}';
     }
 }
