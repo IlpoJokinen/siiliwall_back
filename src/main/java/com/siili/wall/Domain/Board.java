@@ -14,7 +14,6 @@ public class Board {
     @OneToMany(cascade=CascadeType.ALL, mappedBy="board")
     private List<Column> columns;
 
-
     public Board(){}
 
     public Board(String boardName, List<Column> columns){
@@ -54,6 +53,7 @@ public class Board {
         return "Board{" +
                 "boardId=" + boardId +
                 ", boardName='" + boardName + '\'' +
+                ", List<Column>='" + columns + '\'' +
                 '}';
     }
 }
