@@ -1,6 +1,7 @@
 package com.siili.wall.Domain;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity(name="Board")
@@ -11,15 +12,21 @@ public class Board {
     private Long boardId;
     private String boardName;
 
-    @OneToMany(cascade=CascadeType.ALL, mappedBy="board")
-    private List<Column> columns;
+    @ManyToMany(cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    })
+    @JoinTable(name = "board_comment",
+            joinColumns = @JoinColumn(name = "boardId"),
+            inverseJoinColumns = @JoinColumn(name = "columnId")
+    )
+    private List<Column> columns = new ArrayList<>();
 
     public Board(){}
 
-    public Board(String boardName, List<Column> columns){
+    public Board(String boardName){
         super();
         this.boardName = boardName;
-        this.columns = columns;
     }
 
     // GETTERS
@@ -46,6 +53,15 @@ public class Board {
 
     public void setColumns(List<Column> columns) {
         this.columns = columns;
+    }
+
+    public boolean hasColumn(Column column) {
+        for (Column boardColumn: getColumns()) {
+            if (boardColumn.getColumnId() == column.getColumnId()) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override

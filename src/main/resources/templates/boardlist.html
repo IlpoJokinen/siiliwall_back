@@ -9,9 +9,23 @@
 <a href="/newboard">
     <button >Add new board</button>
 </a>
-
+<br>
 <tr th:each = "board : ${boards}">
+    <br>
     <td th:text="${board.boardName}"></td>
+    <br>
+    <form th:object="${column}" th:action="@{/boards/{id}/columns(id=${board.boardId})}" action="#" method="get">
+        <label for="columnname">column name</label>
+        <input type="text" id="columnname" th:field="*{columnName}" />
+        <input type="submit" value="Save"></input>
+    </form>
+
+    <span th:each="column,iterStat : ${board.columns}">
+        <br>
+        <span th:text="${column.columnName}"/>
+        <br>
+    </span>
+
 </tr>
 
 </body>

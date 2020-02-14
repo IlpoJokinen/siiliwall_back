@@ -1,6 +1,7 @@
 package com.siili.wall.Domain;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity(name="Column")
@@ -12,21 +13,15 @@ public class Column {
     private String columnName;
     private int columnLimit;
 
-    @ManyToOne
-    @JoinColumn(name="boardId")
-    private Board board;
-
-    @OneToMany(cascade=CascadeType.ALL, mappedBy="column")
-    private List<Card> cards;
+    @ManyToMany(mappedBy = "columns")
+    private List<Board> boards = new ArrayList<>();
 
     public Column(){}
 
-    public Column(String columnName, int columnLimit, Board board, List<Card> cards){
+    public Column(String columnName, int columnLimit){
         super();
         this.columnName=columnName;
         this.columnLimit=columnLimit;
-        this.board = board;
-        this.cards = cards;
     }
 
     // GETTERS
@@ -40,12 +35,8 @@ public class Column {
 
     public int getColumnLimit() { return columnLimit; }
 
-    public Board getBoard() {
-        return board;
-    }
-
-    public List<Card> getCards() {
-        return cards;
+    public List<Board> getBoards() {
+        return boards;
     }
 
     // SETTERS
@@ -61,12 +52,8 @@ public class Column {
         this.columnLimit = columnLimit;
     }
 
-    public void setBoard(Board board) {
-        this.board = board;
-    }
-
-    public void setCards(List<Card> cards) {
-        this.cards = cards;
+    public void setBoards(List<Board> boards) {
+        this.boards = boards;
     }
 
     @Override
@@ -75,8 +62,6 @@ public class Column {
                 "columnId=" + columnId +
                 ", columnName='" + columnName + '\'' +
                 ", columnLimit='" + columnLimit + '\'' +
-                ", board='" + board + '\'' +
-                ", List<Card>='" + cards + '\'' +
                 '}';
     }
 }
