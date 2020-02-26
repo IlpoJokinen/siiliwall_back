@@ -1,6 +1,8 @@
 package com.siili.wall.Domain;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity(name="Card")
 @Table(name="cards")
@@ -15,9 +17,8 @@ public class Card {
     private int cardSize;
     private int cardDifficulty;
 
-    @ManyToOne
-    @JoinColumn(name="columnId")
-    private Column column;
+    @ManyToMany(mappedBy = "cards")
+    private List<Column> columns = new ArrayList<>();
 
     public Card(){}
 
@@ -29,7 +30,7 @@ public class Card {
         this.cardOwner = cardOwner;
         this.cardSize = cardSize;
         this.cardDifficulty = cardDifficulty;
-        this.column = column;
+
     }
 
     // GETTERS
@@ -60,9 +61,9 @@ public class Card {
     public int getCardDifficulty() {
         return cardDifficulty;
     }
-    
-    public Column getColumn() {
-        return column;
+
+    public List<Column> getColumns() {
+        return columns;
     }
 
     // SETTERS
@@ -94,8 +95,8 @@ public class Card {
         this.cardDifficulty = cardDifficulty;
     }
 
-    public void setColumn(Column column) {
-        this.column = column;
+    public void setColumns(List<Column> columns) {
+        this.columns = columns;
     }
 
     @Override
@@ -108,7 +109,6 @@ public class Card {
                 ", cardOwner='" + cardOwner + '\'' +
                 ", cardSize='" + cardSize + '\'' +
                 ", cardDifficulty='" + cardDifficulty + '\'' +
-                ", column='" + column + '\'' +
                 '}';
     }
 }

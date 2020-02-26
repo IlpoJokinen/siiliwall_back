@@ -24,7 +24,18 @@
         <br>
         <span th:text="${column.columnName}"/>
         <br>
+        <form th:object="${card}" th:action="@{/columns/{id}/cards(id=${column.columnId})}" action="#" method="get">
+        <label for="cardname">card name</label>
+        <input type="text" id="cardname" th:field="*{cardName}" />
+        <input type="submit" value="Save"></input>
+    </form>
+        <span th:each="card,iterStat : ${column.cards}">
+        <br>
+        <span th:text="${card.cardName}"/>
+        <br>
     </span>
+    </span>
+
 
 </tr>
 

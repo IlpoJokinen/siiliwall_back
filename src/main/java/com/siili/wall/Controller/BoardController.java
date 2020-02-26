@@ -2,10 +2,7 @@ package com.siili.wall.Controller;
 
 
 
-import com.siili.wall.Domain.Board;
-import com.siili.wall.Domain.BoardRepository;
-import com.siili.wall.Domain.Column;
-import com.siili.wall.Domain.ColumnRepository;
+import com.siili.wall.Domain.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,12 +20,17 @@ public class BoardController {
     @Autowired
     ColumnRepository crepository;
 
+    @Autowired
+    CardRepository ccrepository;
+
 
     @RequestMapping(value="/boardlist")
     public String boardlist(Model model) {
         model.addAttribute("boards", brepository.findAll());
         model.addAttribute( "column", new Column());
         model.addAttribute("columns", crepository.findAll());
+        model.addAttribute("card", new Card());
+        model.addAttribute("cards", ccrepository.findAll());
         return "boardlist";
     }
 
@@ -44,6 +46,7 @@ public class BoardController {
         return "redirect:boardlist";
     }
 
+    //tämä operaattori tallentaa columnin boardiin
     @RequestMapping(value="/boards/{id}/columns", method=RequestMethod.GET)
     public String boardsAddColumn(@PathVariable("id") Long boardId, @PathVariable("id") Long columnId, Model model, Column column) {
         Optional<Board> board = brepository.findById(boardId);
@@ -52,6 +55,18 @@ public class BoardController {
         brepository.save(board.get());
         model.addAttribute("board", brepository.findById(boardId));
         model.addAttribute("columns", crepository.findAll());
+        return "redirect:/boardlist";
+    }
+
+    // tämä operaattori tallentaa cardin columniin
+    @RequestMapping(value="/columns/{id}/cards", method=RequestMethod.GET)
+    public String columnsAddCard(@PathVariable("id") Long columnId, @PathVariable("id") Long cardId, Model model, Card card) {
+        Optional<Column> column = crepository.findById(columnId);
+        if (!column.get().hasCard(card)) {
+            column.get().getCards().add(card);}
+        crepository.save(column.get());
+        model.addAttribute("column", crepository.findById(columnId));
+        model.addAttribute("cards", ccrepository.findAll());
         return "redirect:/boardlist";
     }
 

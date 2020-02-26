@@ -16,7 +16,7 @@ public class Board {
             CascadeType.PERSIST,
             CascadeType.MERGE
     })
-    @JoinTable(name = "board_comment",
+    @JoinTable(name = "board_column",
             joinColumns = @JoinColumn(name = "boardId"),
             inverseJoinColumns = @JoinColumn(name = "columnId")
     )
