@@ -46,7 +46,7 @@ public class BoardController {
         return "redirect:boardlist";
     }
 
-    //tämä operaattori tallentaa columnin boardiin
+    //This operator saves a column into a board
     @RequestMapping(value="/boards/{id}/columns", method=RequestMethod.GET)
     public String boardsAddColumn(@PathVariable("id") Long boardId, @PathVariable("id") Long columnId, Model model, Column column) {
         Optional<Board> board = brepository.findById(boardId);
@@ -58,7 +58,7 @@ public class BoardController {
         return "redirect:/boardlist";
     }
 
-    // tämä operaattori tallentaa cardin columniin
+    //This operator saves a card into a column
     @RequestMapping(value="/columns/{id}/cards", method=RequestMethod.GET)
     public String columnsAddCard(@PathVariable("id") Long columnId, @PathVariable("id") Long cardId, Model model, Card card) {
         Optional<Column> column = crepository.findById(columnId);
