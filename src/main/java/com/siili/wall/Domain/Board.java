@@ -1,5 +1,7 @@
 package com.siili.wall.Domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +22,7 @@ public class Board {
             joinColumns = @JoinColumn(name = "boardId"),
             inverseJoinColumns = @JoinColumn(name = "columnId")
     )
+    @JsonIgnore
     private List<Column> columns = new ArrayList<>();
 
     public Board(){}

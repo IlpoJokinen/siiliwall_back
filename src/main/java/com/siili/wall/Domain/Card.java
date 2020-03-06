@@ -1,5 +1,7 @@
 package com.siili.wall.Domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +20,7 @@ public class Card {
     private int cardDifficulty;
 
     @ManyToMany(mappedBy = "cards")
+    @JsonIgnore
     private List<Column> columns = new ArrayList<>();
 
     public Card(){}

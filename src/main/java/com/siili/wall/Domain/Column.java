@@ -1,5 +1,7 @@
 package com.siili.wall.Domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +16,7 @@ public class Column {
     private int columnLimit;
 
     @ManyToMany(mappedBy = "columns")
+    @JsonIgnore
     private List<Board> boards = new ArrayList<>();
 
     @ManyToMany(cascade = {
