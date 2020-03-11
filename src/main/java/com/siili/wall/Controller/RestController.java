@@ -21,12 +21,14 @@ public class RestController {
     CardRepository ccrepository;
 
     @RequestMapping(value="/boards", method= RequestMethod.GET)
+    @CrossOrigin
     public @ResponseBody
     List<Board> boardListRest(){
         return(List<Board>) brepository.findAll();
     }
 
     @RequestMapping(value="/board/{id}", method=RequestMethod.GET)
+    @CrossOrigin
     public @ResponseBody
     Optional<Board> findBoardRest(@PathVariable("id") Long boardId){
         return brepository.findById(boardId);
