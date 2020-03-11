@@ -3,10 +3,7 @@ package com.siili.wall.Controller;
 import com.siili.wall.Domain.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -45,5 +42,19 @@ public class RestController {
     public @ResponseBody
     Optional<Column> findColumnRest(@PathVariable("id") Long columnId){
         return crepository.findById(columnId);
+    }
+
+    @RequestMapping(value="/cards", method= RequestMethod.GET)
+    public @ResponseBody
+    List<Card> cardListRest(){
+        return(List<Card>) ccrepository.findAll();
+    }
+
+    //tämä on kesken
+    @RequestMapping(value="/boards/{id}/columns", method = RequestMethod.GET)
+    public @ResponseBody
+    Optional<Column> getAllCommentsByPostId(@PathVariable ("id") Long boardId
+                                                ) {
+        return crepository.findById(boardId);
     }
 }

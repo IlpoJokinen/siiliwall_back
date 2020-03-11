@@ -22,7 +22,7 @@ public class Board {
             joinColumns = @JoinColumn(name = "boardId"),
             inverseJoinColumns = @JoinColumn(name = "columnId")
     )
-    @JsonIgnore
+
     private List<Column> columns = new ArrayList<>();
 
     public Board(){}
