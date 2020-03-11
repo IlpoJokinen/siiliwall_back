@@ -35,25 +35,29 @@ public class RestController {
     }
 
     @RequestMapping(value="/columns", method= RequestMethod.GET)
+    @CrossOrigin
     public @ResponseBody
     List<Column> columnListRest(){
         return(List<Column>) crepository.findAll();
     }
 
     @RequestMapping(value="/column/{id}", method=RequestMethod.GET)
+    @CrossOrigin
     public @ResponseBody
     Optional<Column> findColumnRest(@PathVariable("id") Long columnId){
         return crepository.findById(columnId);
     }
 
     @RequestMapping(value="/cards", method= RequestMethod.GET)
+    @CrossOrigin
     public @ResponseBody
     List<Card> cardListRest(){
         return(List<Card>) ccrepository.findAll();
     }
 
-    //tämä on kesken
+    //tämä on kesken!!
     @RequestMapping(value="/boards/{id}/columns", method = RequestMethod.GET)
+    @CrossOrigin
     public @ResponseBody
     Optional<Column> getAllCommentsByPostId(@PathVariable ("id") Long boardId
                                                 ) {
