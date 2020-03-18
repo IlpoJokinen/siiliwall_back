@@ -11,24 +11,24 @@ import java.util.List;
 public class Card {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private Long cardId;
+    private Long id;
     private String cardName;
-    private String cardDescription;
+    private String content;
     private String cardColor;
     private String cardOwner;
     private int cardSize;
     private int cardDifficulty;
 
-    @ManyToMany(mappedBy = "cards")
+    @ManyToMany(mappedBy = "items")
     @JsonIgnore
     private List<Column> columns = new ArrayList<>();
 
     public Card(){}
 
-    public Card(String cardName, String cardDescription, String cardColor, String cardOwner, int cardSize, int cardDifficulty, Column column){
+    public Card(String cardName, String content, String cardColor, String cardOwner, int cardSize, int cardDifficulty, Column column){
         super();
         this.cardName = cardName;
-        this.cardDescription = cardDescription;
+        this.content = content;
         this.cardColor = cardColor;
         this.cardOwner = cardOwner;
         this.cardSize = cardSize;
@@ -37,16 +37,26 @@ public class Card {
     }
 
     // GETTERS
-    public Long getCardId() {
-        return cardId;
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public String getCardName() {
         return cardName;
-    }
-
-    public String getCardDescription() {
-        return cardDescription;
     }
 
     public String getCardColor() {
@@ -70,17 +80,12 @@ public class Card {
     }
 
     // SETTERS
-    public void setCardId(Long cardId) {
-        this.cardId = cardId;
-    }
+
 
     public void setCardName(String cardName) {
         this.cardName = cardName;
     }
 
-    public void setCardDescription(String cardDescription) {
-        this.cardDescription = cardDescription;
-    }
 
     public void setCardColor(String cardColor) {
         this.cardColor = cardColor;
@@ -105,9 +110,9 @@ public class Card {
     @Override
     public String toString() {
         return "Card{" +
-                "cardId=" + cardId +
+                "cardId=" + id +
                 ", cardName='" + cardName + '\'' +
-                ", cardDescription='" + cardDescription + '\'' +
+                ", cardDescription='" + content + '\'' +
                 ", cardColor='" + cardColor + '\'' +
                 ", cardOwner='" + cardOwner + '\'' +
                 ", cardSize='" + cardSize + '\'' +

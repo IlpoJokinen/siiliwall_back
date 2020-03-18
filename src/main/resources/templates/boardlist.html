@@ -16,22 +16,22 @@
     <br>
     <form th:object="${column}" th:action="@{/boards/{id}/columns(id=${board.boardId})}" action="#" method="get">
         <label for="columnname">column name</label>
-        <input type="text" id="columnname" th:field="*{columnName}" />
+        <input type="text" id="columnname" th:field="*{name}" />
         <input type="submit" value="Save"></input>
     </form>
 
     <span th:each="column,iterStat : ${board.columns}">
         <br>
-        <span th:text="${column.columnName}"/>
+        <span th:text="${column.name}"/>
         <br>
         <form th:object="${card}" th:action="@{/columns/{id}/cards(id=${column.columnId})}" action="#" method="get">
         <label for="cardname">card name</label>
-        <input type="text" id="cardname" th:field="*{cardName}" />
+        <input type="text" id="cardname" th:field="*{content}" />
         <input type="submit" value="Save"></input>
     </form>
-        <span th:each="card,iterStat : ${column.cards}">
+        <span th:each="card,iterStat : ${column.items}">
         <br>
-        <span th:text="${card.cardName}"/>
+        <span th:text="${card.content}"/>
         <br>
     </span>
     </span>

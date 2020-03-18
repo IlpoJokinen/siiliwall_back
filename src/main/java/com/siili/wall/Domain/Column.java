@@ -12,7 +12,7 @@ public class Column {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long columnId;
-    private String columnName;
+    private String name;
     private int columnLimit;
 
     @ManyToMany(mappedBy = "columns")
@@ -25,15 +25,15 @@ public class Column {
     })
     @JoinTable(name = "column_card",
             joinColumns = @JoinColumn(name = "columnId"),
-            inverseJoinColumns = @JoinColumn(name = "cardId")
+            inverseJoinColumns = @JoinColumn(name = "id")
     )
-    private List<Card> cards = new ArrayList<>();
+    private List<Card> items = new ArrayList<>();
 
     public Column(){}
 
-    public Column(String columnName, int columnLimit){
+    public Column(String name, int columnLimit){
         super();
-        this.columnName=columnName;
+        this.name=name;
         this.columnLimit=columnLimit;
     }
 
@@ -42,9 +42,6 @@ public class Column {
         return columnId;
     }
 
-    public String getColumnName() {
-        return columnName;
-    }
 
     public int getColumnLimit() { return columnLimit; }
 
@@ -52,18 +49,12 @@ public class Column {
         return boards;
     }
 
-    public List<Card> getCards() {
-        return cards;
-    }
 
     // SETTERS
     public void setColumnId(Long columnId) {
         this.columnId = columnId;
     }
 
-    public void setColumnName(String columnName) {
-        this.columnName = columnName;
-    }
 
     public void setColumnLimit(int columnLimit) {
         this.columnLimit = columnLimit;
@@ -73,13 +64,25 @@ public class Column {
         this.boards = boards;
     }
 
-    public void setCards(List<Card> cards) {
-        this.cards = cards;
+    public String getName() {
+        return name;
+    }
+
+    public List<Card> getItems() {
+        return items;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setItems(List<Card> items) {
+        this.items = items;
     }
 
     public boolean hasCard(Card card) {
-        for (Card columnCard: getCards()) {
-            if (columnCard.getCardId() == card.getCardId()) {
+        for (Card columnCard: getItems()) {
+            if (columnCard.getId() == card.getId()) {
                 return true;
             }
         }
@@ -90,7 +93,7 @@ public class Column {
     public String toString() {
         return "Column{" +
                 "columnId=" + columnId +
-                ", columnName='" + columnName + '\'' +
+                ", columnName='" + name + '\'' +
                 ", columnLimit='" + columnLimit + '\'' +
                 '}';
     }

@@ -65,7 +65,7 @@ public class BoardController {
     public String columnsAddCard(@PathVariable("id") Long columnId, @PathVariable("id") Long cardId, Model model, Card card) {
         Optional<Column> column = crepository.findById(columnId);
         if (!column.get().hasCard(card)) {
-            column.get().getCards().add(card);}
+            column.get().getItems().add(card);}
         crepository.save(column.get());
         model.addAttribute("column", crepository.findById(columnId));
         model.addAttribute("cards", ccrepository.findAll());
