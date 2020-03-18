@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-@Controller
+@org.springframework.web.bind.annotation.RestController
 public class RestController {
 
     @Autowired
@@ -24,7 +24,8 @@ public class RestController {
     @CrossOrigin
     public @ResponseBody
     List<Board> boardListRest(){
-        return(List<Board>) brepository.findAll();
+        List<Board> boards = (List<Board>) brepository.findAll();
+        return boards;
     }
 
     @RequestMapping(value="/board/{id}", method=RequestMethod.GET)
@@ -55,12 +56,22 @@ public class RestController {
         return(List<Card>) ccrepository.findAll();
     }
 
-    //tämä on kesken!!
-    @RequestMapping(value="/boards/{id}/columns", method = RequestMethod.GET)
+    @RequestMapping(value="/card/{id}", method=RequestMethod.GET)
     @CrossOrigin
     public @ResponseBody
-    Optional<Column> getAllCommentsByPostId(@PathVariable ("id") Long boardId
-                                                ) {
-        return crepository.findById(boardId);
+    Optional<Card> findCardRest(@PathVariable("id") Long cardId){
+        return ccrepository.findById(cardId);
     }
+
+    //tämä on kesken!!
+    //@RequestMapping(value="/boards/{id}/columns", method = RequestMethod.GET)
+    //@CrossOrigin
+    //public @ResponseBody
+    //Optional<Column> getAllCommentsByPostId(@PathVariable ("id") Long boardId
+    //                                            ) {
+    //    return crepository.findById(boardId);
+    //}
+
+
+
 }
