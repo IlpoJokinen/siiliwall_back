@@ -20,7 +20,7 @@ public class RestController {
     @Autowired
     CardRepository ccrepository;
 
-    @RequestMapping(value="/boards", method= RequestMethod.GET)
+    @RequestMapping(value="/boards")
     @CrossOrigin
     public @ResponseBody
     List<Board> boardListRest(){
@@ -35,7 +35,7 @@ public class RestController {
         return brepository.findById(boardId);
     }
 
-    @RequestMapping(value="/columns", method= RequestMethod.GET)
+    @RequestMapping(value="/columns")
     @CrossOrigin
     public @ResponseBody
     List<Column> columnListRest(){
@@ -49,7 +49,7 @@ public class RestController {
         return crepository.findById(columnId);
     }
 
-    @RequestMapping(value="/cards", method= RequestMethod.GET)
+    @RequestMapping(value="/cards")
     @CrossOrigin
     public @ResponseBody
     List<Card> cardListRest(){
@@ -59,8 +59,8 @@ public class RestController {
     @RequestMapping(value="/card/{id}", method=RequestMethod.GET)
     @CrossOrigin
     public @ResponseBody
-    Optional<Card> findCardRest(@PathVariable("id") Long cardId){
-        return ccrepository.findById(cardId);
+    Optional<Card> findCardRest(@PathVariable("id") String id){
+        return ccrepository.findById(id);
     }
 
     //tämä on kesken!!

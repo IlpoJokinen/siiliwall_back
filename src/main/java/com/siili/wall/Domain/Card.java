@@ -10,8 +10,7 @@ import java.util.List;
 @Table(name="cards")
 public class Card {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    private Long id;
+    private String id;
     private String cardName;
     private String content;
     private String cardColor;
@@ -39,16 +38,16 @@ public class Card {
     // GETTERS
 
 
-    public Long getId() {
+    public String getId() {
         return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getContent() {
         return content;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public void setContent(String content) {

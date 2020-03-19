@@ -62,7 +62,7 @@ public class BoardController {
     //This operator saves a card into a column
     @RequestMapping(value="/columns/{id}/cards", method=RequestMethod.GET)
     @CrossOrigin
-    public String columnsAddCard(@PathVariable("id") Long columnId, @PathVariable("id") Long cardId, Model model, Card card) {
+    public String columnsAddCard(@PathVariable("id") Long columnId, @PathVariable("id") String id, Model model, Card card) {
         Optional<Column> column = crepository.findById(columnId);
         if (!column.get().hasCard(card)) {
             column.get().getItems().add(card);}
