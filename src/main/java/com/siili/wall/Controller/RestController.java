@@ -2,7 +2,7 @@ package com.siili.wall.Controller;
 
 import com.siili.wall.Domain.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -73,5 +73,50 @@ public class RestController {
     //}
 
 
+    //postamanilla voi postaa boardin
+    @RequestMapping(value = "/boardpost", method=RequestMethod.POST)
+    @CrossOrigin
+    public  Board addNewBoard(@RequestBody Board board){
+        return  brepository.save(board);
+    }
 
+
+    //postmanilla voi postaa columnin
+    @RequestMapping(value = "/columnpost", method=RequestMethod.POST)
+    @CrossOrigin
+    public  Column addNewColumn(@RequestBody Column column){
+        return  crepository.save(column);
+    }
+
+
+    //
+    @RequestMapping(value = "/cardpost", method=RequestMethod.POST)
+    @CrossOrigin
+    public  Card addNewCard(@RequestBody Card card){
+        return  ccrepository.save(card);
+    }
+
+
+
+    //boardin idn avulla voidaan lisätä column
+    @RequestMapping(value="/boardss/{id}/columns", method=RequestMethod.POST)
+    public Iterable<Column> boardsAddColumn(@PathVariable("id") Long boardId, @RequestBody Column column) {
+        Optional<Board> board = brepository.findById(boardId);
+        if (!board.get().hasColumn(column)) {
+            board.get().getColumns().add(column);}
+        brepository.save(board.get());
+        brepository.findById(boardId);
+        return crepository.findAll();
+    }
+
+    //columnin idn avulla voidaan lisätä card
+    @RequestMapping(value="/columnss/{id}/cards", method=RequestMethod.POST)
+    public Iterable<Card> columnsAddCard(@PathVariable("id") Long columnId, @RequestBody Card card) {
+        Optional<Column> column = crepository.findById(columnId);
+        if (!column.get().hasCard(card)) {
+            column.get().getItems().add(card);}
+        crepository.save(column.get());
+        crepository.findById(columnId);
+        return ccrepository.findAll();
+    }
 }
