@@ -100,6 +100,7 @@ public class RestController {
 
     //boardin idn avulla voidaan lisätä column
     @RequestMapping(value="/boardss/{id}/columns", method=RequestMethod.POST)
+    @CrossOrigin
     public Iterable<Column> boardsAddColumn(@PathVariable("id") Long boardId, @RequestBody Column column) {
         Optional<Board> board = brepository.findById(boardId);
         if (!board.get().hasColumn(column)) {
@@ -111,6 +112,7 @@ public class RestController {
 
     //columnin idn avulla voidaan lisätä card
     @RequestMapping(value="/columnss/{id}/cards", method=RequestMethod.POST)
+    @CrossOrigin
     public Iterable<Card> columnsAddCard(@PathVariable("id") Long columnId, @RequestBody Card card) {
         Optional<Column> column = crepository.findById(columnId);
         if (!column.get().hasCard(card)) {
