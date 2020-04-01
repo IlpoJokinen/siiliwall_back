@@ -20,12 +20,12 @@ public class WallApplication {
     @Bean
     public CommandLineRunner studentDemo(BoardRepository brepository, ColumnRepository crepository, CardRepository ccrepository) {
         return (args) -> {
-            log.info("kokeilu");
+            brepository.deleteAll();
 
-            Board board = new Board("aaa");
+            Board board = new Board("Board1");
 
-            Column column1 = new Column("Spring Boot",1);
-            Column column2 = new Column("Boot",50);
+            Column column1 = new Column("Column1",1);
+            Column column2 = new Column("Column2",50);
 
             board.getColumns().add(column1);
             board.getColumns().add(column2);
