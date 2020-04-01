@@ -21,6 +21,8 @@ public class WallApplication {
     public CommandLineRunner studentDemo(BoardRepository brepository, ColumnRepository crepository, CardRepository ccrepository) {
         return (args) -> {
             brepository.deleteAll();
+            crepository.deleteAll();
+            ccrepository.deleteAll();
 
             Board board = new Board("Board1");
 
@@ -34,14 +36,14 @@ public class WallApplication {
             column2.getBoards().add(board);
 
             //test
-            //Card card1 = new Card("Card1","aaa","dddd","aaaa",1,5);
-            //Card card2 = new Card("Card2","aaa","dddd","aaaa",1,5);
+            Card card1 = new Card("Card1","kortti1","sisältö1","vihreä","valtteri",9,345);
+            Card card2 = new Card("Card2","kortti2","sisältö2","sininen","joonas",4,5789);
 
-            //column1.getItems().add(card1);
-            //column2.getItems().add(card2);
+            column1.getItems().add(card1);
+            column2.getItems().add(card2);
 
-            //card1.getColumns().add(column1);
-            //card2.getColumns().add(column1);
+            card1.getColumns().add(column1);
+            card2.getColumns().add(column1);
 
             brepository.save(board);
 
