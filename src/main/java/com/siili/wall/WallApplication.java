@@ -25,10 +25,6 @@ public class WallApplication {
             crepository.save(new Column("Column1CLR", 0));
             crepository.save(new Column("Column2CLR", 0));
 
-            brepository.save(new Board("Board1FromCLR", crepository.findByColumn("Column1CLR").get(0)));
-
-
-
 
 
             log.info("nouto");
