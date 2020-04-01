@@ -27,10 +27,9 @@ public class Board {
 
     public Board(){}
 
-    public Board(String boardName, List<Column> columns){
+    public Board(String boardName){
         super();
         this.boardName = boardName;
-        this.columns = columns;
     }
 
     // GETTERS

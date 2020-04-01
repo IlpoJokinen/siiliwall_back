@@ -24,7 +24,7 @@ public class Card {
 
     public Card(){}
 
-    public Card(String cardName, String content, String cardColor, String cardOwner, int cardSize, int cardDifficulty, Column column){
+    public Card(String cardName, String content, String cardColor, String cardOwner, int cardSize, int cardDifficulty){
         super();
         this.cardName = cardName;
         this.content = content;
