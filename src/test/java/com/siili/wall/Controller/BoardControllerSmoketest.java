@@ -1,4 +1,4 @@
-package com.siili.wall;
+package com.siili.wall.Controller;
 
 import com.siili.wall.Controller.BoardController;
 import static org.assertj.core.api.Assertions.assertThat;

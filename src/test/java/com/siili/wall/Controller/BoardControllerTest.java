@@ -1,4 +1,4 @@
-package com.siili.wall;
+package com.siili.wall.Controller;
 
 
 import static org.hamcrest.Matchers.containsString;
