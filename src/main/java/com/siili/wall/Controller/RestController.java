@@ -2,7 +2,6 @@ package com.siili.wall.Controller;
 
 import com.siili.wall.Domain.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -121,4 +120,30 @@ public class RestController {
         crepository.findById(columnId);
         return ccrepository.findAll();
     }
+
+    //delete board
+    @RequestMapping(value="/deleteboard/{id}", method=RequestMethod.DELETE)
+    public Iterable<Board> deleteboard(@PathVariable("id") Long boardId) {
+        brepository.deleteById(boardId);
+        return brepository.findAll();
+    }
+
+    //delete column from board
+    @RequestMapping(value="/board/{boardid}/deletecolumn/{columnid}", method=RequestMethod.DELETE)
+    public Iterable<Board> deleteboardcolumn(@PathVariable("boardid") Long boardId, @PathVariable("columnid") Long columnId) {
+        Optional<Column> column = crepository.findById(columnId);
+        Optional<Board> board = brepository.findById(boardId);
+        if (board.isPresent()) {
+            board.get().getColumns().remove(column.get());
+            crepository.deleteById(columnId);
+            brepository.save(board.get());
+            return brepository.findAll();
+        }
+        return brepository.findAll();
+
+    }
+
+
+
+
 }
