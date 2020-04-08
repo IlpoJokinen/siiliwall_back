@@ -26,8 +26,8 @@ public class WallApplication {
 
             Board board = new Board("Board1");
 
-            Column column1 = new Column("Column1",1);
-            Column column2 = new Column("Column2",50);
+            Column column1 = new Column((long) 11,"Column1",1);
+            Column column2 = new Column((long) 5,"Column2",50);
 
             board.getColumns().add(column1);
             board.getColumns().add(column2);

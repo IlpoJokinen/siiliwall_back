@@ -10,7 +10,6 @@ import java.util.List;
 @Table(name="columns")
 public class Column {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long columnId;
     private String name;
     private int columnLimit;
@@ -31,8 +30,9 @@ public class Column {
 
     public Column(){}
 
-    public Column(String name, int columnLimit){
+    public Column(Long columnId, String name, int columnLimit){
         super();
+        this.columnId=columnId;
         this.name=name;
         this.columnLimit=columnLimit;
     }
