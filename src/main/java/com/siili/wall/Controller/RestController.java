@@ -123,6 +123,7 @@ public class RestController {
 
     //delete board
     @RequestMapping(value="/deleteboard/{id}", method=RequestMethod.DELETE)
+    @CrossOrigin
     public Iterable<Board> deleteboard(@PathVariable("id") Long boardId) {
         brepository.deleteById(boardId);
         return brepository.findAll();
@@ -130,6 +131,7 @@ public class RestController {
 
     //delete column from board
     @RequestMapping(value="/board/{boardid}/deletecolumn/{columnid}", method=RequestMethod.DELETE)
+    @CrossOrigin
     public Iterable<Board> deleteboardcolumn(@PathVariable("boardid") Long boardId, @PathVariable("columnid") Long columnId) {
         Optional<Column> column = crepository.findById(columnId);
         Optional<Board> board = brepository.findById(boardId);
