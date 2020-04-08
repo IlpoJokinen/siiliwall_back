@@ -146,11 +146,11 @@ public class RestController {
     }
 
     //delete card from column using columnname
-    @RequestMapping(value="/{columnname}/deletecard/{id}", method=RequestMethod.DELETE)
+    @RequestMapping(value="/{columnid}/deletecard/{id}", method=RequestMethod.DELETE)
     @CrossOrigin
-    public Iterable<Column> deletecolumncard(@PathVariable("columnname") String name, @PathVariable("id") String id) {
+    public Iterable<Column> deletecolumncard(@PathVariable("columnid") Long columnId, @PathVariable("id") String id) {
         Optional<Card> item = ccrepository.findById(id);
-        Optional<Column> column = crepository.findByName(name);
+        Optional<Column> column = crepository.findById(columnId);
         if (column.isPresent()) {
             column.get().getItems().remove(item.get());
             ccrepository.deleteById(id);
