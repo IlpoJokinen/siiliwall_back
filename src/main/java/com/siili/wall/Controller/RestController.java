@@ -188,7 +188,7 @@ public class RestController {
         Optional<Card> item = ccrepository.findById(id);
         Optional<Column> column = crepository.findById(columnId);
         if (column.isPresent()) {
-            column.get().getItems().remove(item.get());
+            column.get().getItems().add(item.get());
             crepository.findById(columnId);
             crepository.save(column.get());
             return crepository.findAll();
