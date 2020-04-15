@@ -180,17 +180,19 @@ public class RestController {
     }
 
 
-    ////testi testi pahasti kesken
-    ////testi testi pahasti kesken
-    @RequestMapping(value="/{columnid}/removecard/{id}", method=RequestMethod.GET)
+    //itemin paikkaa voidaan vaihtaa kolumnista toiseen
+    @RequestMapping(value="/{columnid}/removecard/{id}/move/{columnidd}")
     @CrossOrigin
-    public Iterable<Column> removecard(@PathVariable("columnid") Long columnId, @PathVariable("id") String id) {
-        Optional<Card> item = ccrepository.findById(id);
+    public Iterable<Column> removecard(@PathVariable("columnid") Long columnId, @PathVariable("columnidd") Long columnIdd, @PathVariable("id") String id) {
+        Optional<Card> item1 = ccrepository.findById(id);
         Optional<Column> column = crepository.findById(columnId);
+        Optional<Column> column2 = crepository.findById(columnIdd);
         if (column.isPresent()) {
-            column.get().getItems().add(item.get());
-            crepository.findById(columnId);
+            column.get().getItems().remove(item1.get());
+            ccrepository.deleteById(id);
             crepository.save(column.get());
+            column2.get().getItems().add(item1.get());
+            crepository.save(column2.get());
             return crepository.findAll();
         }
         return crepository.findAll();
