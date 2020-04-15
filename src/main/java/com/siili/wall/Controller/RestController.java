@@ -161,6 +161,24 @@ public class RestController {
 
     }
 
+    //update board
+    @RequestMapping(value="/editboard/{id}", method = RequestMethod.PUT)
+    @CrossOrigin
+    public Iterable<Board> editboard(@PathVariable("id") Long boardId, @RequestBody Board board) {
+        brepository.findById(boardId);
+        brepository.save(board);
+        return brepository.findAll();
+    }
+
+    //update column
+    @RequestMapping(value="/editcolumn/{id}", method = RequestMethod.PUT)
+    @CrossOrigin
+    public Iterable<Column> editcolumn(@PathVariable("id") Long columnId, @RequestBody Column column) {
+        crepository.findById(columnId);
+        crepository.save(column);
+        return crepository.findAll();
+    }
+
 
 
 
