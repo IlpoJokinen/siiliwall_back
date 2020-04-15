@@ -190,7 +190,6 @@ public class RestController {
         if (column.isPresent()) {
             column.get().getItems().remove(item.get());
             crepository.findById(columnId);
-            column.get().getItems().add(item.get());
             crepository.save(column.get());
             return crepository.findAll();
         }
