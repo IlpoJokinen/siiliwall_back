@@ -210,4 +210,51 @@ public class RestControllerTest {
         // Verify the results
         verify(restControllerUnderTest.ccrepository).deleteById("id");
     }
+
+    @Test
+    public void testEditboard() {
+        // Setup
+        final Board board = new Board("boardName");
+        when(restControllerUnderTest.brepository.findById(0L)).thenReturn(Optional.of(new Board("boardName")));
+        when(restControllerUnderTest.brepository.save(any(Board.class))).thenReturn(new Board("boardName"));
+        when(restControllerUnderTest.brepository.findAll()).thenReturn(Arrays.asList(new Board("boardName")));
+
+        // Run the test
+        final Iterable<Board> result = restControllerUnderTest.editboard(0L, board);
+
+        // Verify the results
+    }
+
+    @Test
+    public void testEditcolumn() {
+        // Setup
+        final Column column = new Column(0L, "name", 0);
+        when(restControllerUnderTest.crepository.findById(0L)).thenReturn(Optional.of(new Column(0L, "name", 0)));
+        when(restControllerUnderTest.crepository.save(any(Column.class))).thenReturn(new Column(0L, "name", 0));
+        when(restControllerUnderTest.crepository.findAll()).thenReturn(Arrays.asList(new Column(0L, "name", 0)));
+
+        // Run the test
+        final Iterable<Column> result = restControllerUnderTest.editcolumn(0L, column);
+
+        // Verify the results
+    }
+
+    @Test
+    public void testRemovecard() {
+        // Setup
+
+        // Configure CardRepository.findById(...).
+        final Optional<Card> card = Optional.of(new Card("id", "cardName", "content", "cardColor", "cardOwner", 0, 0));
+        when(restControllerUnderTest.ccrepository.findById("id")).thenReturn(card);
+
+        when(restControllerUnderTest.crepository.findById(0L)).thenReturn(Optional.of(new Column(0L, "name", 0)));
+        when(restControllerUnderTest.crepository.save(any(Column.class))).thenReturn(new Column(0L, "name", 0));
+        when(restControllerUnderTest.crepository.findAll()).thenReturn(Arrays.asList(new Column(0L, "name", 0)));
+
+        // Run the test
+        final Iterable<Column> result = restControllerUnderTest.removecard(0L, 0L, "id", 0);
+
+        // Verify the results
+        verify(restControllerUnderTest.ccrepository).deleteById("id");
+    }
 }
