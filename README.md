@@ -2,6 +2,12 @@
 
 ## Starting of daily work
 
+
+
+
+
+
+Aloitus aina `git status`
 Start your workday with `git status`
 
 To see commit-history use `git log`
@@ -93,7 +99,24 @@ If you have no use for branch, you can delete it with -d (--delete).
 
 `git  branch –d branch`
 
+<<<<<<< HEAD
+-- make documentation in English
+-- Topics needed in documentation
+1. Merge instructions
+2. Removing of unneeded commit
+3. Starting of Daily work
+4. Naming convention used in branching
+5. Convention of commit messages
+6. Acceptance criteria of putting something to git
+7. Ending of daily work
+8. Possible external resources/links used define how git is used
+
+
+
+## Jos haluat lisätä tiedoston repositoryyn.
+=======
 ## Convention of commit messages
+>>>>>>> 92967fd54a43b69ca253ce930aaf4d09b8fcfc0e
 
 A properly formed git commit subject line should always be able to complete the following sentence
 
