@@ -17,7 +17,7 @@ public class RestController {
     ColumnRepository crepository;
 
     @Autowired
-    CardRepository ccrepository;
+    ItemRepository irepository;
 
     @RequestMapping(value="/boards")
     @CrossOrigin
@@ -51,26 +51,16 @@ public class RestController {
     @RequestMapping(value="/cards")
     @CrossOrigin
     public @ResponseBody
-    List<Card> cardListRest(){
-        return(List<Card>) ccrepository.findAll();
+    List<Item> cardListRest(){
+        return(List<Item>) irepository.findAll();
     }
 
     @RequestMapping(value="/card/{id}", method=RequestMethod.GET)
     @CrossOrigin
     public @ResponseBody
-    Optional<Card> findCardRest(@PathVariable("id") String id){
-        return ccrepository.findById(id);
+    Optional<Item> findCardRest(@PathVariable("id") String id){
+        return irepository.findById(id);
     }
-
-    //tämä on kesken!!
-    //@RequestMapping(value="/boards/{id}/columns", method = RequestMethod.GET)
-    //@CrossOrigin
-    //public @ResponseBody
-    //Optional<Column> getAllCommentsByPostId(@PathVariable ("id") Long boardId
-    //                                            ) {
-    //    return crepository.findById(boardId);
-    //}
-
 
     //postamanilla voi postaa boardin
     @RequestMapping(value = "/boardpost", method=RequestMethod.POST)
@@ -79,7 +69,6 @@ public class RestController {
         return  brepository.save(board);
     }
 
-
     //postmanilla voi postaa columnin
     @RequestMapping(value = "/columnpost", method=RequestMethod.POST)
     @CrossOrigin
@@ -87,15 +76,12 @@ public class RestController {
         return  crepository.save(column);
     }
 
-
-    //
+    //postmanilla voi lisätä uuden kortin
     @RequestMapping(value = "/cardpost", method=RequestMethod.POST)
     @CrossOrigin
-    public  Card addNewCard(@RequestBody Card card){
-        return  ccrepository.save(card);
+    public Item addNewCard(@RequestBody Item item){
+        return  irepository.save(item);
     }
-
-
 
     //boardin idn avulla voidaan lisätä column
     @RequestMapping(value="/boardss/{id}/columns", method=RequestMethod.POST)
@@ -109,16 +95,16 @@ public class RestController {
         return crepository.findAll();
     }
 
-    //columnin idn avulla voidaan lisätä card
+    //columnin idn avulla voidaan lisätä item
     @RequestMapping(value="/columnss/{id}/cards", method=RequestMethod.POST)
     @CrossOrigin
-    public Iterable<Card> columnsAddCard(@PathVariable("id") Long columnId, @RequestBody Card card) {
+    public Iterable<Item> columnsAddCard(@PathVariable("id") Long columnId, @RequestBody Item item) {
         Optional<Column> column = crepository.findById(columnId);
-        if (!column.get().hasCard(card)) {
-            column.get().getItems().add(card);}
+        if (!column.get().hasCard(item)) {
+            column.get().getItems().add(item);}
         crepository.save(column.get());
         crepository.findById(columnId);
-        return ccrepository.findAll();
+        return irepository.findAll();
     }
 
     //delete board
@@ -142,26 +128,24 @@ public class RestController {
             return brepository.findAll();
         }
         return brepository.findAll();
-
     }
 
     //delete card from column using columnname
     @RequestMapping(value="/{columnid}/deletecard/{id}", method=RequestMethod.DELETE)
     @CrossOrigin
     public Iterable<Column> deletecolumncard(@PathVariable("columnid") Long columnId, @PathVariable("id") String id) {
-        Optional<Card> item = ccrepository.findById(id);
+        Optional<Item> item = irepository.findById(id);
         Optional<Column> column = crepository.findById(columnId);
         if (column.isPresent()) {
             column.get().getItems().remove(item.get());
-            ccrepository.deleteById(id);
+            irepository.deleteById(id);
             crepository.save(column.get());
             return crepository.findAll();
         }
         return crepository.findAll();
-
     }
 
-    //update board
+    //edit board
     @RequestMapping(value="/editboard/{id}", method = RequestMethod.PUT)
     @CrossOrigin
     public Iterable<Board> editboard(@PathVariable("id") Long boardId, @RequestBody Board board) {
@@ -170,7 +154,7 @@ public class RestController {
         return brepository.findAll();
     }
 
-    //update column
+    //edit column
     @RequestMapping(value="/editcolumn/{id}", method = RequestMethod.PUT)
     @CrossOrigin
     public Iterable<Column> editcolumn(@PathVariable("id") Long columnId, @RequestBody Column column) {
@@ -184,20 +168,17 @@ public class RestController {
     @RequestMapping(value="/{columnidstart}/removecard/{id}/moveto/{columniddestination}/{index}", method = RequestMethod.GET)
     @CrossOrigin
     public Iterable<Column> removecard(@PathVariable("columnidstart") Long columnIdStart, @PathVariable("columniddestination") Long columnIdDestination, @PathVariable("id") String id, @PathVariable("index") int index) {
-        Optional<Card> item = ccrepository.findById(id);
+        Optional<Item> item = irepository.findById(id);
         Optional<Column> columnstart = crepository.findById(columnIdStart);
         Optional<Column> columndestination = crepository.findById(columnIdDestination);
         if (columnstart.isPresent()) {
             columnstart.get().getItems().remove(item.get());
-            ccrepository.deleteById(id);
+            irepository.deleteById(id);
             crepository.save(columnstart.get());
             columndestination.get().getItems().add(index,item.get());
             crepository.save(columndestination.get());
             return crepository.findAll();
         }
         return crepository.findAll();
-
     }
-
-
 }

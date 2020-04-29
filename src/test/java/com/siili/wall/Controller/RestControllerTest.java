@@ -20,7 +20,7 @@ public class RestControllerTest {
         restControllerUnderTest = new RestController();
         restControllerUnderTest.brepository = mock(BoardRepository.class);
         restControllerUnderTest.crepository = mock(ColumnRepository.class);
-        restControllerUnderTest.ccrepository = mock(CardRepository.class);
+        restControllerUnderTest.irepository = mock(ItemRepository.class);
     }
 
     @Test
@@ -71,12 +71,12 @@ public class RestControllerTest {
     public void testCardListRest() {
         // Setup
 
-        // Configure CardRepository.findAll(...).
-        final Iterable<Card> cards = Arrays.asList(new Card("id", "cardName", "content", "cardColor", "cardOwner", 0, 0));
-        when(restControllerUnderTest.ccrepository.findAll()).thenReturn(cards);
+        // Configure ItemRepository.findAll(...).
+        final Iterable<Item> cards = Arrays.asList(new Item("id", "cardName", "content", "cardColor", "cardOwner", 0, 0));
+        when(restControllerUnderTest.irepository.findAll()).thenReturn(cards);
 
         // Run the test
-        final List<Card> result = restControllerUnderTest.cardListRest();
+        final List<Item> result = restControllerUnderTest.cardListRest();
 
         // Verify the results
     }
@@ -85,12 +85,12 @@ public class RestControllerTest {
     public void testFindCardRest() {
         // Setup
 
-        // Configure CardRepository.findById(...).
-        final Optional<Card> card = Optional.of(new Card("id", "cardName", "content", "cardColor", "cardOwner", 0, 0));
-        when(restControllerUnderTest.ccrepository.findById("id")).thenReturn(card);
+        // Configure ItemRepository.findById(...).
+        final Optional<Item> card = Optional.of(new Item("id", "cardName", "content", "cardColor", "cardOwner", 0, 0));
+        when(restControllerUnderTest.irepository.findById("id")).thenReturn(card);
 
         // Run the test
-        final Optional<Card> result = restControllerUnderTest.findCardRest("id");
+        final Optional<Item> result = restControllerUnderTest.findCardRest("id");
 
         // Verify the results
     }
@@ -122,14 +122,14 @@ public class RestControllerTest {
     @Test
     public void testAddNewCard() {
         // Setup
-        final Card card = new Card("id", "cardName", "content", "cardColor", "cardOwner", 0, 0);
+        final Item item = new Item("id", "cardName", "content", "cardColor", "cardOwner", 0, 0);
 
-        // Configure CardRepository.save(...).
-        final Card card1 = new Card("id", "cardName", "content", "cardColor", "cardOwner", 0, 0);
-        when(restControllerUnderTest.ccrepository.save(any(Card.class))).thenReturn(card1);
+        // Configure ItemRepository.save(...).
+        final Item item1 = new Item("id", "cardName", "content", "cardColor", "cardOwner", 0, 0);
+        when(restControllerUnderTest.irepository.save(any(Item.class))).thenReturn(item1);
 
         // Run the test
-        final Card result = restControllerUnderTest.addNewCard(card);
+        final Item result = restControllerUnderTest.addNewCard(item);
 
         // Verify the results
     }
@@ -151,16 +151,16 @@ public class RestControllerTest {
     @Test
     public void testColumnsAddCard() {
         // Setup
-        final Card card = new Card("id", "cardName", "content", "cardColor", "cardOwner", 0, 0);
+        final Item item = new Item("id", "cardName", "content", "cardColor", "cardOwner", 0, 0);
         when(restControllerUnderTest.crepository.findById(0L)).thenReturn(Optional.of(new Column(0L, "name", 0)));
         when(restControllerUnderTest.crepository.save(any(Column.class))).thenReturn(new Column(0L, "name", 0));
 
-        // Configure CardRepository.findAll(...).
-        final Iterable<Card> cards = Arrays.asList(new Card("id", "cardName", "content", "cardColor", "cardOwner", 0, 0));
-        when(restControllerUnderTest.ccrepository.findAll()).thenReturn(cards);
+        // Configure ItemRepository.findAll(...).
+        final Iterable<Item> cards = Arrays.asList(new Item("id", "cardName", "content", "cardColor", "cardOwner", 0, 0));
+        when(restControllerUnderTest.irepository.findAll()).thenReturn(cards);
 
         // Run the test
-        final Iterable<Card> result = restControllerUnderTest.columnsAddCard(0L, card);
+        final Iterable<Item> result = restControllerUnderTest.columnsAddCard(0L, item);
 
         // Verify the results
     }
@@ -196,9 +196,9 @@ public class RestControllerTest {
     public void testDeletecolumncard() {
         // Setup
 
-        // Configure CardRepository.findById(...).
-        final Optional<Card> card = Optional.of(new Card("id", "cardName", "content", "cardColor", "cardOwner", 0, 0));
-        when(restControllerUnderTest.ccrepository.findById("id")).thenReturn(card);
+        // Configure ItemRepository.findById(...).
+        final Optional<Item> card = Optional.of(new Item("id", "cardName", "content", "cardColor", "cardOwner", 0, 0));
+        when(restControllerUnderTest.irepository.findById("id")).thenReturn(card);
 
         when(restControllerUnderTest.crepository.findById(0L)).thenReturn(Optional.of(new Column(0L, "name", 0)));
         when(restControllerUnderTest.crepository.save(any(Column.class))).thenReturn(new Column(0L, "name", 0));
@@ -208,7 +208,7 @@ public class RestControllerTest {
         final Iterable<Column> result = restControllerUnderTest.deletecolumncard(0L, "id");
 
         // Verify the results
-        verify(restControllerUnderTest.ccrepository).deleteById("id");
+        verify(restControllerUnderTest.irepository).deleteById("id");
     }
 
     @Test
@@ -243,9 +243,9 @@ public class RestControllerTest {
     public void testRemovecard() {
         // Setup
 
-        // Configure CardRepository.findById(...).
-        final Optional<Card> card = Optional.of(new Card("id", "cardName", "content", "cardColor", "cardOwner", 0, 0));
-        when(restControllerUnderTest.ccrepository.findById("id")).thenReturn(card);
+        // Configure ItemRepository.findById(...).
+        final Optional<Item> card = Optional.of(new Item("id", "cardName", "content", "cardColor", "cardOwner", 0, 0));
+        when(restControllerUnderTest.irepository.findById("id")).thenReturn(card);
 
         when(restControllerUnderTest.crepository.findById(0L)).thenReturn(Optional.of(new Column(0L, "name", 0)));
         when(restControllerUnderTest.crepository.save(any(Column.class))).thenReturn(new Column(0L, "name", 0));
@@ -255,6 +255,6 @@ public class RestControllerTest {
         final Iterable<Column> result = restControllerUnderTest.removecard(0L, 0L, "id", 0);
 
         // Verify the results
-        verify(restControllerUnderTest.ccrepository).deleteById("id");
+        verify(restControllerUnderTest.irepository).deleteById("id");
     }
 }

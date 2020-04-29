@@ -26,7 +26,7 @@ public class Column {
             joinColumns = @JoinColumn(name = "columnId"),
             inverseJoinColumns = @JoinColumn(name = "id")
     )
-    private List<Card> items = new ArrayList<>();
+    private List<Item> items = new ArrayList<>();
 
     public Column(){}
 
@@ -42,11 +42,18 @@ public class Column {
         return columnId;
     }
 
-
     public int getColumnLimit() { return columnLimit; }
 
     public List<Board> getBoards() {
         return boards;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public List<Item> getItems() {
+        return items;
     }
 
 
@@ -54,7 +61,6 @@ public class Column {
     public void setColumnId(Long columnId) {
         this.columnId = columnId;
     }
-
 
     public void setColumnLimit(int columnLimit) {
         this.columnLimit = columnLimit;
@@ -64,25 +70,17 @@ public class Column {
         this.boards = boards;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public List<Card> getItems() {
-        return items;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setItems(List<Card> items) {
+    public void setItems(List<Item> items) {
         this.items = items;
     }
 
-    public boolean hasCard(Card card) {
-        for (Card columnCard: getItems()) {
-            if (columnCard.getId() == card.getId()) {
+    public boolean hasCard(Item item) {
+        for (Item columnItem : getItems()) {
+            if (columnItem.getId() == item.getId()) {
                 return true;
             }
         }

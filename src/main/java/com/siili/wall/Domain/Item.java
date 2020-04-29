@@ -8,7 +8,7 @@ import java.util.List;
 
 @Entity(name="Card")
 @Table(name="cards")
-public class Card {
+public class Item {
     @Id
     private String id;
     private String cardName;
@@ -22,9 +22,9 @@ public class Card {
     @JsonIgnore
     private List<Column> columns = new ArrayList<>();
 
-    public Card(){}
+    public Item(){}
 
-    public Card(String id, String cardName, String content, String cardColor, String cardOwner, int cardSize, int cardDifficulty){
+    public Item(String id, String cardName, String content, String cardColor, String cardOwner, int cardSize, int cardDifficulty){
         super();
         this.id = id;
         this.cardName = cardName;
@@ -38,21 +38,12 @@ public class Card {
 
     // GETTERS
 
-
     public String getId() {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public String getContent() {
         return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
     }
 
     public String getCardName() {
@@ -81,11 +72,17 @@ public class Card {
 
     // SETTERS
 
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public void setCardName(String cardName) {
         this.cardName = cardName;
     }
 
+    public void setContent(String content) {
+        this.content = content;
+    }
 
     public void setCardColor(String cardColor) {
         this.cardColor = cardColor;
@@ -109,7 +106,7 @@ public class Card {
 
     @Override
     public String toString() {
-        return "Card{" +
+        return "Item{" +
                 "cardId=" + id +
                 ", cardName='" + cardName + '\'' +
                 ", cardDescription='" + content + '\'' +
