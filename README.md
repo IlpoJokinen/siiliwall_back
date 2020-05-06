@@ -1,4 +1,4 @@
-# Siili Wall Project
+# SiiliWall Project Backend
 
 ## How to Setup Backend
 
@@ -12,7 +12,7 @@ How do I get backend to work?
 5.	Name the app and set location as Europe (original name was ‘siiliwall’ so if that is not available, come up with a new one.
 6.	Go to `https://data.heroku.com/` and open the Heroku-project you created.
 7.	Go to Settings tab and click ‘View Credentials’
-ATTENTION! Here you will find the credentials that need to be edited in application.properties -file in your backend. Push changes to GitHub.
+*ATTENTION!* Here you will find the credentials that need to be edited in application.properties -file in your backend. Push changes to GitHub.
 
 8.	Open project in Heroku (dashboard.heroku.com) and go to ‘Deploy’ tab
 a.	Choose Deploy Method – GitHub
