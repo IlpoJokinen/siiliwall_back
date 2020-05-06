@@ -13,10 +13,10 @@ How do I get backend to work?
 *ATTENTION!* Here you will find the credentials that need to be edited in application.properties -file in your backend. Push changes to GitHub.
 
 8.	Open project in Heroku (dashboard.heroku.com) and go to ‘Deploy’ tab
-a.	Choose Deploy Method – GitHub
-b.	App Connect to GitHub – pick the backend repository from GitHub
-c.	Manual Deploy – choose deployment branch that is used to build the project (ie. Master)
-d.	Automatic Deploys – click “Enable Automatic Deploys”
+*	Choose Deploy Method – GitHub
+*	App Connect to GitHub – pick the backend repository from GitHub
+*	Manual Deploy – choose deployment branch that is used to build the project (ie. Master)
+*	Automatic Deploys – click “Enable Automatic Deploys”
 9.	Wait for App to finish build.
 10.	Go to projects Heroku-page and click ’Open App’ from top right.
 Currently the App gives a Whitelabel Error since no root URL is determined.
