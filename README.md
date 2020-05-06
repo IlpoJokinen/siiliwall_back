@@ -1,5 +1,33 @@
 # Siili Wall Project
 
+## How to Setup Backend
+
+SiiliWall Backend Documentation
+
+How do I get backend to work?
+1.	Find out the location of the backend repository in GitHub. Clone the project to your computer and open it with an editor program for example IntelliJ or Eclipse.
+2.	Open application.properties -file. You can find it from /src/main/resources. Keep it open because soon you will make changes to the configurations.
+3.	Create credentials in Heroku.com
+4.	In Heroku, create new app (New App -> Create New App)
+5.	Name the app and set location as Europe (original name was ‘siiliwall’ so if that is not available, come up with a new one.
+6.	Go to `https://data.heroku.com/` and open the Heroku-project you created.
+7.	Go to Settings tab and click ‘View Credentials’
+ATTENTION! Here you will find the credentials that need to be edited in application.properties -file in your backend. Push changes to GitHub.
+
+8.	Open project in Heroku (dashboard.heroku.com) and go to ‘Deploy’ tab
+a.	Choose Deploy Method – GitHub
+b.	App Connect to GitHub – pick the backend repository from GitHub
+c.	Manual Deploy – choose deployment branch that is used to build the project (ie. Master)
+d.	Automatic Deploys – click “Enable Automatic Deploys”
+9.	Wait for App to finish build.
+10.	Go to projects Heroku-page and click ’Open App’ from top right.
+Currently the App gives a Whitelabel Error since no root URL is determined.
+Backend and Database are successfully built if you can see JSON-data on the following page:
+`PROJECTNAME/herokuapp.com/boards`
+(boards-endpoint is determined in RestController-file in backend)
+
+
+
 ## Starting of daily work
 
 
