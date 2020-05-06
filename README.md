@@ -1,11 +1,9 @@
 # SiiliWall Project Backend
 
-## How to Setup Backend
-
-SiiliWall Backend Documentation
+## How to Setup SiiliWall Backend
 
 How do I get backend to work?
-1.	Find out the location of the backend repository in GitHub. Clone the project to your computer and open it with an editor program for example IntelliJ or Eclipse.
+1.	Clone backend to your computer and open it with an editor program for example IntelliJ or Eclipse.
 2.	Open application.properties -file. You can find it from /src/main/resources. Keep it open because soon you will make changes to the configurations.
 3.	Create credentials in Heroku.com
 4.	In Heroku, create new app (New App -> Create New App)
