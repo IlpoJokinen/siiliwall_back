@@ -125,14 +125,6 @@ If you have no use for branch, you can delete it with -d (--delete).
 
 `git  branch –d branch`
 
-## Acceptance criteria of putting something to git
-
-Test code.
-
-Code review with project team members and learning process.
-
-Code review with the boss.
-
 ### Delete commit using commit id you can find commit id from github commits. Id contains 8 characters or/and digits
 
 Write `git push origin +id^: master`
@@ -149,7 +141,3 @@ Write `git push origin +id^: master`
 [Visual Studio Code](https://code.visualstudio.com/)
 
 [IntelliJ IDEA](https://www.jetbrains.com/idea/)
-   
-## Possible external resources/links used define how git is used
-
-[ADD LINK NAME HERE](ADD LINK URL HERE)
