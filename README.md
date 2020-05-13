@@ -24,7 +24,8 @@ Backend and Database are successfully built if you can see JSON-data on the foll
 `PROJECTNAME/herokuapp.com/boards`
 (boards-endpoint is determined in RestController-file in backend)
 
-
+## Tech
+java version "1.8.0_241"
 
 ## Starting of daily work
 
