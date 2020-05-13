@@ -101,13 +101,6 @@ Step 5. Exit writing mode by pressing esc key on your keyboard.
 
 Step 6. Finish merging process by writing :wq and pressing enter on your keyboard.
 
-### Making pull request
-
-Changes coming from pull request should be always done in feature-branches. # example feature/development
-
-Pulling is just doing a fetch followed by a merge. If you know your branch is clean (e.g., master branch), go ahead and get the latest changes. There will be no merge conflicts as long as your branch is clean.
-
-Command `git pull`
 
 ## Naming convention used in branching
 
