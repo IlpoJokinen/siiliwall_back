@@ -1,5 +1,9 @@
 # SiiliWall Project Backend
 
+Siiliwall Backend used this repository as frontend:
+https://github.com/Vilhard/siiliwall_front
+But when this project moves forward, Siili has their own repositories set up for future development
+
 ## How to Setup SiiliWall Backend
 
 How do I get backend to work?
